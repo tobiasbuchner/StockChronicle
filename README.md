@@ -8,20 +8,27 @@ Data is ingested daily into a PostgreSQL database and used for AI-based predicti
 ## 📁 Project Structure
 ```
 StockChronicle/
-│── data/ # Raw data, CSVs, etc.
-│── notebooks/ # Jupyter Notebooks for analysis
-│── src/ # Source code
-│ ├── etl/ # ETL scripts (Extract, Transform, Load)
-│ │ ├── fetch_data.py # API fetch script
-│ │ ├── transform.py # Data processing
-│ │ ├── load_db.py # Load data into Postgres
-│ ├── models/ # AI models for predictions
-│ ├── visualization/ # Dashboards & plots
-│── tests/ # Unit tests
-│── .gitignore # Files to ignore in Git
-│── environment.yml # Conda environment dependencies
-│── requirements.txt # Alternative for pip dependencies
-│── README.md # Project documentation
+│── config/              # ✅ Configuration files
+│   ├── wikipedia_sources.yaml  # Index sources & validation counts
+│   ├── .env                    # Database credentials
+│── data/                # Raw data, CSVs, etc.
+│── notebooks/           # Jupyter Notebooks for analysis
+│── src/                 # Source code
+│   ├── etl/             # ETL scripts (Extract, Transform, Load)
+│   │   ├── fetch_data.py   # API fetch script
+│   │   ├── transform.py    # Data processing
+│   │   ├── load_db.py      # Load data into Postgres
+│   ├── models/          # AI models for predictions
+│   ├── visualization/   # Dashboards & plots
+│   ├── utils/           # ✅ Reusable helper functions (e.g., logging, error handling)
+│   ├── db/              # ✅ Database connection handling
+│       ├── db_connection.py # Handles PostgreSQL connection
+│── tests/               # Unit tests
+│── .gitignore           # Files to ignore in Git
+│── environment.yml      # Conda environment dependencies
+│── requirements.txt     # Alternative for pip dependencies
+│── README.md            # Project documentation
+
 ```
 ---
 

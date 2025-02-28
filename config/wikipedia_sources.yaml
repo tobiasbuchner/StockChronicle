@@ -1,0 +1,17 @@
+indices:
+  DAX:
+    url: "https://en.wikipedia.org/wiki/DAX"
+    columns: ["Ticker", "Company"]
+    expected_count: 40  # DAX 40 components
+  S&P500:
+    url: "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+    columns: ["Symbol", "Security"]
+    expected_count: 500
+  Dow Jones:
+    url: "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
+    columns: ["Symbol", "Company"]
+    expected_count: 30
+  NASDAQ-100:
+    url: "https://en.wikipedia.org/wiki/NASDAQ-100"
+    columns: ["Ticker", "Company"]
+    expected_count: 100
