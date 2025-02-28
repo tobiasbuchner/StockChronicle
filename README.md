@@ -8,20 +8,20 @@ Data is ingested daily into a PostgreSQL database and used for AI-based predicti
 ## 📁 Project Structure
 ```
 StockChronicle/
-│── data/ # Rohdaten, CSVs, etc.
-│── notebooks/ # Jupyter Notebooks für Analysen
-│── src/ # Quellcode
-│ ├── etl/ # ETL-Skripte (Extract, Transform, Load)
-│ │ ├── fetch_data.py # API-Abruf
-│ │ ├── transform.py # Datenverarbeitung
-│ │ ├── load_db.py # Daten in Postgres speichern
-│ ├── models/ # KI-Modelle für Vorhersagen
-│ ├── visualization/ # Dashboards & Plots
-│── tests/ # Unittests
-│── .gitignore # Dateien, die nicht ins Repo sollen
-│── environment.yml # Conda-Environment mit allen Abhängigkeiten
-│── requirements.txt # Alternativ für Pip-Abhängigkeiten
-│── README.md # Projektdokumentation
+│── data/ # Raw data, CSVs, etc.
+│── notebooks/ # Jupyter Notebooks for analysis
+│── src/ # Source code
+│ ├── etl/ # ETL scripts (Extract, Transform, Load)
+│ │ ├── fetch_data.py # API fetch script
+│ │ ├── transform.py # Data processing
+│ │ ├── load_db.py # Load data into Postgres
+│ ├── models/ # AI models for predictions
+│ ├── visualization/ # Dashboards & plots
+│── tests/ # Unit tests
+│── .gitignore # Files to ignore in Git
+│── environment.yml # Conda environment dependencies
+│── requirements.txt # Alternative for pip dependencies
+│── README.md # Project documentation
 ```
 ---
 
