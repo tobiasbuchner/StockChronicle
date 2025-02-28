@@ -27,7 +27,7 @@ StockChronicle/
 
 ## 🚀 Setup & Installation  
 
-### **1️⃣ Klone das Repository**  
+### **1️⃣ Clone the repository**  
 ```bash
 git clone https://github.com/dein-github-user/StockChronicle.git
 cd StockChronicle
