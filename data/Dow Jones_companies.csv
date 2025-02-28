@@ -1,31 +1,31 @@
-Ticker,Company
-MMM,3M
-AXP,American Express
-AMGN,Amgen
-AMZN,Amazon
-AAPL,Apple
-BA,Boeing
-CAT,Caterpillar
-CVX,Chevron
-CSCO,Cisco
-KO,Coca-Cola
-DIS,Disney
-GS,Goldman Sachs
-HD,Home Depot
-HON,Honeywell
-IBM,IBM
-JNJ,Johnson & Johnson
-JPM,JPMorgan Chase
-MCD,McDonald's
-MRK,Merck
-MSFT,Microsoft
-NKE,Nike
-NVDA,Nvidia
-PG,Procter & Gamble
-CRM,Salesforce
-SHW,Sherwin-Williams
-TRV,Travelers
-UNH,UnitedHealth Group
-VZ,Verizon
-V,Visa
-WMT,Walmart
+Ticker,Company,Index
+MMM,3M,Dow Jones
+AXP,American Express,Dow Jones
+AMGN,Amgen,Dow Jones
+AMZN,Amazon,Dow Jones
+AAPL,Apple,Dow Jones
+BA,Boeing,Dow Jones
+CAT,Caterpillar,Dow Jones
+CVX,Chevron,Dow Jones
+CSCO,Cisco,Dow Jones
+KO,Coca-Cola,Dow Jones
+DIS,Disney,Dow Jones
+GS,Goldman Sachs,Dow Jones
+HD,Home Depot,Dow Jones
+HON,Honeywell,Dow Jones
+IBM,IBM,Dow Jones
+JNJ,Johnson & Johnson,Dow Jones
+JPM,JPMorgan Chase,Dow Jones
+MCD,McDonald's,Dow Jones
+MRK,Merck,Dow Jones
+MSFT,Microsoft,Dow Jones
+NKE,Nike,Dow Jones
+NVDA,Nvidia,Dow Jones
+PG,Procter & Gamble,Dow Jones
+CRM,Salesforce,Dow Jones
+SHW,Sherwin-Williams,Dow Jones
+TRV,Travelers,Dow Jones
+UNH,UnitedHealth Group,Dow Jones
+VZ,Verizon,Dow Jones
+V,Visa,Dow Jones
+WMT,Walmart,Dow Jones

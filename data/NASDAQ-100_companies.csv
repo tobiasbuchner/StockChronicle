@@ -1,102 +1,102 @@
-Ticker,Company
-ADBE,Adobe Inc.
-AMD,Advanced Micro Devices
-ABNB,Airbnb
-GOOGL,Alphabet Inc. (Class A)
-GOOG,Alphabet Inc. (Class C)
-AMZN,Amazon
-AEP,American Electric Power
-AMGN,Amgen
-ADI,Analog Devices
-ANSS,Ansys
-AAPL,Apple Inc.
-AMAT,Applied Materials
-APP,AppLovin
-ARM,Arm Holdings
-ASML,ASML Holding
-AZN,AstraZeneca
-TEAM,Atlassian
-ADSK,Autodesk
-ADP,Automatic Data Processing
-AXON,Axon Enterprise
-BKR,Baker Hughes
-BIIB,Biogen
-BKNG,Booking Holdings
-AVGO,Broadcom
-CDNS,Cadence Design Systems
-CDW,CDW Corporation
-CHTR,Charter Communications
-CTAS,Cintas
-CSCO,Cisco
-CCEP,Coca-Cola Europacific Partners
-CTSH,Cognizant
-CMCSA,Comcast
-CEG,Constellation Energy
-CPRT,Copart
-CSGP,CoStar Group
-COST,Costco
-CRWD,CrowdStrike
-CSX,CSX Corporation
-DDOG,Datadog
-DXCM,DexCom
-FANG,Diamondback Energy
-DASH,DoorDash
-EA,Electronic Arts
-EXC,Exelon
-FAST,Fastenal
-FTNT,Fortinet
-GEHC,GE HealthCare
-GILD,Gilead Sciences
-GFS,GlobalFoundries
-HON,Honeywell
-IDXX,Idexx Laboratories
-INTC,Intel
-INTU,Intuit
-ISRG,Intuitive Surgical
-KDP,Keurig Dr Pepper
-KLAC,KLA Corporation
-KHC,Kraft Heinz
-LRCX,Lam Research
-LIN,Linde plc
-LULU,Lululemon Athletica
-MAR,Marriott International
-MRVL,Marvell Technology
-MELI,MercadoLibre
-META,Meta Platforms
-MCHP,Microchip Technology
-MU,Micron Technology
-MSFT,Microsoft
-MSTR,MicroStrategy
-MDLZ,Mondelez International
-MDB,MongoDB Inc.
-MNST,Monster Beverage
-NFLX,"Netflix, Inc."
-NVDA,Nvidia
-NXPI,NXP Semiconductors
-ORLY,O'Reilly Automotive
-ODFL,Old Dominion Freight Line
-ON,Onsemi
-PCAR,Paccar
-PLTR,Palantir Technologies
-PANW,Palo Alto Networks
-PAYX,Paychex
-PYPL,PayPal
-PDD,PDD Holdings
-PEP,PepsiCo
-QCOM,Qualcomm
-REGN,Regeneron Pharmaceuticals
-ROP,Roper Technologies
-ROST,Ross Stores
-SBUX,Starbucks
-SNPS,Synopsys
-TTWO,Take-Two Interactive
-TMUS,T-Mobile US
-TSLA,"Tesla, Inc."
-TXN,Texas Instruments
-TTD,Trade Desk (The)
-VRSK,Verisk Analytics
-VRTX,Vertex Pharmaceuticals
-WBD,Warner Bros. Discovery
-WDAY,"Workday, Inc."
-XEL,Xcel Energy
-ZS,Zscaler
+Ticker,Company,Index
+ADBE,Adobe Inc.,NASDAQ-100
+AMD,Advanced Micro Devices,NASDAQ-100
+ABNB,Airbnb,NASDAQ-100
+GOOGL,Alphabet Inc. (Class A),NASDAQ-100
+GOOG,Alphabet Inc. (Class C),NASDAQ-100
+AMZN,Amazon,NASDAQ-100
+AEP,American Electric Power,NASDAQ-100
+AMGN,Amgen,NASDAQ-100
+ADI,Analog Devices,NASDAQ-100
+ANSS,Ansys,NASDAQ-100
+AAPL,Apple Inc.,NASDAQ-100
+AMAT,Applied Materials,NASDAQ-100
+APP,AppLovin,NASDAQ-100
+ARM,Arm Holdings,NASDAQ-100
+ASML,ASML Holding,NASDAQ-100
+AZN,AstraZeneca,NASDAQ-100
+TEAM,Atlassian,NASDAQ-100
+ADSK,Autodesk,NASDAQ-100
+ADP,Automatic Data Processing,NASDAQ-100
+AXON,Axon Enterprise,NASDAQ-100
+BKR,Baker Hughes,NASDAQ-100
+BIIB,Biogen,NASDAQ-100
+BKNG,Booking Holdings,NASDAQ-100
+AVGO,Broadcom,NASDAQ-100
+CDNS,Cadence Design Systems,NASDAQ-100
+CDW,CDW Corporation,NASDAQ-100
+CHTR,Charter Communications,NASDAQ-100
+CTAS,Cintas,NASDAQ-100
+CSCO,Cisco,NASDAQ-100
+CCEP,Coca-Cola Europacific Partners,NASDAQ-100
+CTSH,Cognizant,NASDAQ-100
+CMCSA,Comcast,NASDAQ-100
+CEG,Constellation Energy,NASDAQ-100
+CPRT,Copart,NASDAQ-100
+CSGP,CoStar Group,NASDAQ-100
+COST,Costco,NASDAQ-100
+CRWD,CrowdStrike,NASDAQ-100
+CSX,CSX Corporation,NASDAQ-100
+DDOG,Datadog,NASDAQ-100
+DXCM,DexCom,NASDAQ-100
+FANG,Diamondback Energy,NASDAQ-100
+DASH,DoorDash,NASDAQ-100
+EA,Electronic Arts,NASDAQ-100
+EXC,Exelon,NASDAQ-100
+FAST,Fastenal,NASDAQ-100
+FTNT,Fortinet,NASDAQ-100
+GEHC,GE HealthCare,NASDAQ-100
+GILD,Gilead Sciences,NASDAQ-100
+GFS,GlobalFoundries,NASDAQ-100
+HON,Honeywell,NASDAQ-100
+IDXX,Idexx Laboratories,NASDAQ-100
+INTC,Intel,NASDAQ-100
+INTU,Intuit,NASDAQ-100
+ISRG,Intuitive Surgical,NASDAQ-100
+KDP,Keurig Dr Pepper,NASDAQ-100
+KLAC,KLA Corporation,NASDAQ-100
+KHC,Kraft Heinz,NASDAQ-100
+LRCX,Lam Research,NASDAQ-100
+LIN,Linde plc,NASDAQ-100
+LULU,Lululemon Athletica,NASDAQ-100
+MAR,Marriott International,NASDAQ-100
+MRVL,Marvell Technology,NASDAQ-100
+MELI,MercadoLibre,NASDAQ-100
+META,Meta Platforms,NASDAQ-100
+MCHP,Microchip Technology,NASDAQ-100
+MU,Micron Technology,NASDAQ-100
+MSFT,Microsoft,NASDAQ-100
+MSTR,MicroStrategy,NASDAQ-100
+MDLZ,Mondelez International,NASDAQ-100
+MDB,MongoDB Inc.,NASDAQ-100
+MNST,Monster Beverage,NASDAQ-100
+NFLX,"Netflix, Inc.",NASDAQ-100
+NVDA,Nvidia,NASDAQ-100
+NXPI,NXP Semiconductors,NASDAQ-100
+ORLY,O'Reilly Automotive,NASDAQ-100
+ODFL,Old Dominion Freight Line,NASDAQ-100
+ON,Onsemi,NASDAQ-100
+PCAR,Paccar,NASDAQ-100
+PLTR,Palantir Technologies,NASDAQ-100
+PANW,Palo Alto Networks,NASDAQ-100
+PAYX,Paychex,NASDAQ-100
+PYPL,PayPal,NASDAQ-100
+PDD,PDD Holdings,NASDAQ-100
+PEP,PepsiCo,NASDAQ-100
+QCOM,Qualcomm,NASDAQ-100
+REGN,Regeneron Pharmaceuticals,NASDAQ-100
+ROP,Roper Technologies,NASDAQ-100
+ROST,Ross Stores,NASDAQ-100
+SBUX,Starbucks,NASDAQ-100
+SNPS,Synopsys,NASDAQ-100
+TTWO,Take-Two Interactive,NASDAQ-100
+TMUS,T-Mobile US,NASDAQ-100
+TSLA,"Tesla, Inc.",NASDAQ-100
+TXN,Texas Instruments,NASDAQ-100
+TTD,Trade Desk (The),NASDAQ-100
+VRSK,Verisk Analytics,NASDAQ-100
+VRTX,Vertex Pharmaceuticals,NASDAQ-100
+WBD,Warner Bros. Discovery,NASDAQ-100
+WDAY,"Workday, Inc.",NASDAQ-100
+XEL,Xcel Energy,NASDAQ-100
+ZS,Zscaler,NASDAQ-100

@@ -1,41 +1,41 @@
-Ticker,Company
-ADS.DE,Adidas
-AIR.PA,Airbus
-ALV.DE,Allianz
-BAS.DE,BASF
-BAYN.DE,Bayer
-BEI.DE,Beiersdorf
-BMW.DE,BMW
-BNR.DE,Brenntag
-CBK.DE,Commerzbank
-CON.DE,Continental
-1COV.DE,Covestro
-DTG.DE,Daimler Truck
-DBK.DE,Deutsche Bank
-DB1.DE,Deutsche Börse
-DHL.DE,Deutsche Post
-DTE.DE,Deutsche Telekom
-EOAN.DE,E.ON
-FRE.DE,Fresenius
-HNR1.DE,Hannover Re
-HEI.DE,Heidelberg Materials
-HEN3.DE,Henkel
-IFX.DE,Infineon Technologies
-MBG.DE,Mercedes-Benz Group
-MRK.DE,Merck
-MTX.DE,MTU Aero Engines
-MUV2.DE,Munich Re
-P911.DE,Porsche
-PAH3.DE,Porsche SE
-QIA.DE,Qiagen
-RHM.DE,Rheinmetall
-RWE.DE,RWE
-SAP.DE,SAP
-SRT3.DE,Sartorius
-SIE.DE,Siemens
-ENR.DE,Siemens Energy
-SHL.DE,Siemens Healthineers
-SY1.DE,Symrise
-VOW3.DE,Volkswagen Group
-VNA.DE,Vonovia
-ZAL.DE,Zalando
+Ticker,Company,Index
+ADS.DE,Adidas,DAX
+AIR.PA,Airbus,DAX
+ALV.DE,Allianz,DAX
+BAS.DE,BASF,DAX
+BAYN.DE,Bayer,DAX
+BEI.DE,Beiersdorf,DAX
+BMW.DE,BMW,DAX
+BNR.DE,Brenntag,DAX
+CBK.DE,Commerzbank,DAX
+CON.DE,Continental,DAX
+1COV.DE,Covestro,DAX
+DTG.DE,Daimler Truck,DAX
+DBK.DE,Deutsche Bank,DAX
+DB1.DE,Deutsche Börse,DAX
+DHL.DE,Deutsche Post,DAX
+DTE.DE,Deutsche Telekom,DAX
+EOAN.DE,E.ON,DAX
+FRE.DE,Fresenius,DAX
+HNR1.DE,Hannover Re,DAX
+HEI.DE,Heidelberg Materials,DAX
+HEN3.DE,Henkel,DAX
+IFX.DE,Infineon Technologies,DAX
+MBG.DE,Mercedes-Benz Group,DAX
+MRK.DE,Merck,DAX
+MTX.DE,MTU Aero Engines,DAX
+MUV2.DE,Munich Re,DAX
+P911.DE,Porsche,DAX
+PAH3.DE,Porsche SE,DAX
+QIA.DE,Qiagen,DAX
+RHM.DE,Rheinmetall,DAX
+RWE.DE,RWE,DAX
+SAP.DE,SAP,DAX
+SRT3.DE,Sartorius,DAX
+SIE.DE,Siemens,DAX
+ENR.DE,Siemens Energy,DAX
+SHL.DE,Siemens Healthineers,DAX
+SY1.DE,Symrise,DAX
+VOW3.DE,Volkswagen Group,DAX
+VNA.DE,Vonovia,DAX
+ZAL.DE,Zalando,DAX

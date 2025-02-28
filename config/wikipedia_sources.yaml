@@ -6,7 +6,7 @@ indices:
   S&P500:
     url: "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
     columns: ["Symbol", "Security"]
-    expected_count: 500
+    expected_count: 503
   Dow Jones:
     url: "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
     columns: ["Symbol", "Company"]
@@ -14,4 +14,4 @@ indices:
   NASDAQ-100:
     url: "https://en.wikipedia.org/wiki/NASDAQ-100"
     columns: ["Ticker", "Company"]
-    expected_count: 100
+    expected_count: 101
