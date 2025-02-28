@@ -6,6 +6,7 @@ Data is ingested daily into a PostgreSQL database and used for AI-based predicti
 ---
 
 ## 📁 Project Structure
+'''
 StockChronicle/
 │── data/ # Rohdaten, CSVs, etc.
 │── notebooks/ # Jupyter Notebooks für Analysen
@@ -21,7 +22,7 @@ StockChronicle/
 │── environment.yml # Conda-Environment mit allen Abhängigkeiten
 │── requirements.txt # Alternativ für Pip-Abhängigkeiten
 │── README.md # Projektdokumentation
-
+'''
 ---
 
 ## 🚀 Setup & Installation  
