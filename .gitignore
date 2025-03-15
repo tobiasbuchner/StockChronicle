@@ -171,4 +171,5 @@ cython_debug/
 .pypirc
 
 # Ignore data folder
-data/
+data/*
+!data/.gitignore
