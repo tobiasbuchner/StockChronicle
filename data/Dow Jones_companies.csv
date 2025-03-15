@@ -1,31 +1,31 @@
-Ticker,Company,Index
-MMM,3M,Dow Jones
-AXP,American Express,Dow Jones
-AMGN,Amgen,Dow Jones
-AMZN,Amazon,Dow Jones
-AAPL,Apple,Dow Jones
-BA,Boeing,Dow Jones
-CAT,Caterpillar,Dow Jones
-CVX,Chevron,Dow Jones
-CSCO,Cisco,Dow Jones
-KO,Coca-Cola,Dow Jones
-DIS,Disney,Dow Jones
-GS,Goldman Sachs,Dow Jones
-HD,Home Depot,Dow Jones
-HON,Honeywell,Dow Jones
-IBM,IBM,Dow Jones
-JNJ,Johnson & Johnson,Dow Jones
-JPM,JPMorgan Chase,Dow Jones
-MCD,McDonald's,Dow Jones
-MRK,Merck,Dow Jones
-MSFT,Microsoft,Dow Jones
-NKE,Nike,Dow Jones
-NVDA,Nvidia,Dow Jones
-PG,Procter & Gamble,Dow Jones
-CRM,Salesforce,Dow Jones
-SHW,Sherwin-Williams,Dow Jones
-TRV,Travelers,Dow Jones
-UNH,UnitedHealth Group,Dow Jones
-VZ,Verizon,Dow Jones
-V,Visa,Dow Jones
-WMT,Walmart,Dow Jones
+Ticker,Company,Sector,Index
+MMM,3M,Conglomerate,Dow Jones
+AXP,American Express,Financial services,Dow Jones
+AMGN,Amgen,Biopharmaceutical,Dow Jones
+AMZN,Amazon,Retailing,Dow Jones
+AAPL,Apple,Information technology,Dow Jones
+BA,Boeing,Aerospace and defense,Dow Jones
+CAT,Caterpillar,Construction and mining,Dow Jones
+CVX,Chevron,Petroleum industry,Dow Jones
+CSCO,Cisco,Information technology,Dow Jones
+KO,Coca-Cola,Drink industry,Dow Jones
+DIS,Disney,Broadcasting and entertainment,Dow Jones
+GS,Goldman Sachs,Financial services,Dow Jones
+HD,Home Depot,Home Improvement,Dow Jones
+HON,Honeywell,Conglomerate,Dow Jones
+IBM,IBM,Information technology,Dow Jones
+JNJ,Johnson & Johnson,Pharmaceutical industry,Dow Jones
+JPM,JPMorgan Chase,Financial services,Dow Jones
+MCD,McDonald's,Food industry,Dow Jones
+MRK,Merck,Pharmaceutical industry,Dow Jones
+MSFT,Microsoft,Information technology,Dow Jones
+NKE,Nike,Clothing industry,Dow Jones
+NVDA,Nvidia,Information technology,Dow Jones
+PG,Procter & Gamble,Fast-moving consumer goods,Dow Jones
+CRM,Salesforce,Information technology,Dow Jones
+SHW,Sherwin-Williams,Speciality chemicals,Dow Jones
+TRV,Travelers,Insurance,Dow Jones
+UNH,UnitedHealth Group,Managed health care,Dow Jones
+VZ,Verizon,Telecommunications industry,Dow Jones
+V,Visa,Financial services,Dow Jones
+WMT,Walmart,Retailing,Dow Jones

@@ -1,17 +1,40 @@
-indices:
-  DAX:
-    url: "https://en.wikipedia.org/wiki/DAX"
-    columns: ["Ticker", "Company"]
-    expected_count: 40  # DAX 40 components
-  S&P500:
-    url: "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
-    columns: ["Symbol", "Security"]
-    expected_count: 503
-  Dow Jones:
-    url: "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
-    columns: ["Symbol", "Company"]
-    expected_count: 30
-  NASDAQ-100:
-    url: "https://en.wikipedia.org/wiki/NASDAQ-100"
-    columns: ["Ticker", "Company"]
-    expected_count: 101
+sources:
+  wikipedia:
+    indices:
+      DAX:
+        url: "https://en.wikipedia.org/wiki/DAX"
+        table_index: 3  # Falls mehrere Tabellen existieren
+        columns: 
+          Ticker: ["Ticker"]
+          Company: ["Company"]
+          Sector: ["Prime Standard Sector"]  # Optional: Branche
+        expected_range: [35, 45]  # DAX hat 40 Werte, erlauben kleine Abweichung
+
+      S&P500:
+        url: "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+        table_index: 0
+        columns: 
+          Ticker: ["Symbol"]
+          Company: ["Security"]
+          Sector: ["GICS Sector"]
+          Country: [""]
+        expected_range: [500, 510]
+
+      Dow Jones:
+        url: "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
+        table_index: 0  # Falls die Tabelle nicht die erste ist
+        columns: 
+          Ticker: ["Symbol"]
+          Company: ["Company"]
+          Sector: ["Industry"]
+          Country: [""]
+        expected_range: [28, 32]
+      NASDAQ-100:
+        url: "https://en.wikipedia.org/wiki/NASDAQ-100"
+        table_index: 3
+        columns: 
+          Ticker: ["Ticker"]
+          Company: ["Company"]
+          Sector: ["GICS Sector"]
+          Country: ["Country"]
+        expected_range: [98, 105]

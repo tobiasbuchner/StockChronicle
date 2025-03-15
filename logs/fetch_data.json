@@ -1,0 +1,630 @@
+{"timestamp": "2025-03-15 19:52:54,999", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 19:52:55,000", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:52:55,011", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:52:55,141", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 19:52:55,177", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:52:55,411", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for DAX"}
+{"timestamp": "2025-03-15 19:52:55,441", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.44 seconds"}
+{"timestamp": "2025-03-15 19:52:55,448", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company Index\n0   ADS.DE   Adidas   DAX\n1   AIR.PA   Airbus   DAX\n2   ALV.DE  Allianz   DAX\n3   BAS.DE     BASF   DAX\n4  BAYN.DE    Bayer   DAX"}
+{"timestamp": "2025-03-15 19:52:55,449", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 19:52:55,449", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:52:55,450", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:52:55,575", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 19:52:55,747", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:52:56,714", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for S&P500"}
+{"timestamp": "2025-03-15 19:52:56,843", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 1 matched for S&P500"}
+{"timestamp": "2025-03-15 19:52:56,848", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.40 seconds"}
+{"timestamp": "2025-03-15 19:52:56,853", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company   Index\n0    MMM                   3M  S&P500\n1    AOS          A. O. Smith  S&P500\n2    ABT  Abbott Laboratories  S&P500\n3   ABBV               AbbVie  S&P500\n4    ACN            Accenture  S&P500"}
+{"timestamp": "2025-03-15 19:52:56,853", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 19:52:56,853", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:52:56,855", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:52:56,965", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 19:52:57,025", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:52:57,305", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for Dow Jones"}
+{"timestamp": "2025-03-15 19:52:57,336", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.48 seconds"}
+{"timestamp": "2025-03-15 19:52:57,341", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company      Index\n0    MMM                3M  Dow Jones\n1    AXP  American Express  Dow Jones\n2   AMGN             Amgen  Dow Jones\n3   AMZN            Amazon  Dow Jones\n4   AAPL             Apple  Dow Jones"}
+{"timestamp": "2025-03-15 19:52:57,342", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 19:52:57,342", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:52:57,343", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:52:57,448", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 19:52:57,501", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:52:57,865", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for NASDAQ-100"}
+{"timestamp": "2025-03-15 19:52:57,874", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.53 seconds"}
+{"timestamp": "2025-03-15 19:52:57,881", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company       Index\n0   ADBE               Adobe Inc.  NASDAQ-100\n1    AMD   Advanced Micro Devices  NASDAQ-100\n2   ABNB                   Airbnb  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  NASDAQ-100"}
+{"timestamp": "2025-03-15 19:53:40,310", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 19:53:40,312", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:53:40,323", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:53:41,519", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 19:53:41,556", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:53:41,800", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for DAX"}
+{"timestamp": "2025-03-15 19:53:41,826", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 1.51 seconds"}
+{"timestamp": "2025-03-15 19:53:41,832", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company Index\n0   ADS.DE   Adidas   DAX\n1   AIR.PA   Airbus   DAX\n2   ALV.DE  Allianz   DAX\n3   BAS.DE     BASF   DAX\n4  BAYN.DE    Bayer   DAX"}
+{"timestamp": "2025-03-15 19:53:41,832", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 19:53:41,832", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:53:41,834", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:53:41,942", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 19:53:42,020", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:53:42,982", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for S&P500"}
+{"timestamp": "2025-03-15 19:53:43,114", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 1 matched for S&P500"}
+{"timestamp": "2025-03-15 19:53:43,118", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.29 seconds"}
+{"timestamp": "2025-03-15 19:53:43,122", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company   Index\n0    MMM                   3M  S&P500\n1    AOS          A. O. Smith  S&P500\n2    ABT  Abbott Laboratories  S&P500\n3   ABBV               AbbVie  S&P500\n4    ACN            Accenture  S&P500"}
+{"timestamp": "2025-03-15 19:53:43,123", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 19:53:43,123", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:53:43,124", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:53:43,228", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 19:53:43,312", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:53:43,606", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for Dow Jones"}
+{"timestamp": "2025-03-15 19:53:43,631", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.51 seconds"}
+{"timestamp": "2025-03-15 19:53:43,636", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company      Index\n0    MMM                3M  Dow Jones\n1    AXP  American Express  Dow Jones\n2   AMGN             Amgen  Dow Jones\n3   AMZN            Amazon  Dow Jones\n4   AAPL             Apple  Dow Jones"}
+{"timestamp": "2025-03-15 19:53:43,637", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 19:53:43,637", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:53:43,638", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:53:43,743", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 19:53:43,795", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:53:44,168", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for NASDAQ-100"}
+{"timestamp": "2025-03-15 19:53:44,171", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.53 seconds"}
+{"timestamp": "2025-03-15 19:53:44,176", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company       Index\n0   ADBE               Adobe Inc.  NASDAQ-100\n1    AMD   Advanced Micro Devices  NASDAQ-100\n2   ABNB                   Airbnb  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  NASDAQ-100"}
+{"timestamp": "2025-03-15 19:54:42,330", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 19:54:42,330", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:54:42,340", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:54:42,450", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 19:54:42,487", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:54:42,690", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for DAX"}
+{"timestamp": "2025-03-15 19:54:42,709", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.38 seconds"}
+{"timestamp": "2025-03-15 19:54:42,714", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company Index\n0   ADS.DE   Adidas   DAX\n1   AIR.PA   Airbus   DAX\n2   ALV.DE  Allianz   DAX\n3   BAS.DE     BASF   DAX\n4  BAYN.DE    Bayer   DAX"}
+{"timestamp": "2025-03-15 19:54:42,714", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 19:54:42,714", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:54:42,715", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:54:42,825", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 19:54:42,901", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:54:43,893", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for S&P500"}
+{"timestamp": "2025-03-15 19:54:44,014", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 1 matched for S&P500"}
+{"timestamp": "2025-03-15 19:54:44,017", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.30 seconds"}
+{"timestamp": "2025-03-15 19:54:44,022", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company   Index\n0    MMM                   3M  S&P500\n1    AOS          A. O. Smith  S&P500\n2    ABT  Abbott Laboratories  S&P500\n3   ABBV               AbbVie  S&P500\n4    ACN            Accenture  S&P500"}
+{"timestamp": "2025-03-15 19:54:44,022", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 19:54:44,022", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:54:44,023", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:54:44,126", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 19:54:44,189", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:54:44,468", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for Dow Jones"}
+{"timestamp": "2025-03-15 19:54:44,491", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.47 seconds"}
+{"timestamp": "2025-03-15 19:54:44,495", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company      Index\n0    MMM                3M  Dow Jones\n1    AXP  American Express  Dow Jones\n2   AMGN             Amgen  Dow Jones\n3   AMZN            Amazon  Dow Jones\n4   AAPL             Apple  Dow Jones"}
+{"timestamp": "2025-03-15 19:54:44,495", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 19:54:44,495", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:54:44,497", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:54:44,599", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 19:54:44,654", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:54:45,024", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for NASDAQ-100"}
+{"timestamp": "2025-03-15 19:54:45,026", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.53 seconds"}
+{"timestamp": "2025-03-15 19:54:45,031", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company       Index\n0   ADBE               Adobe Inc.  NASDAQ-100\n1    AMD   Advanced Micro Devices  NASDAQ-100\n2   ABNB                   Airbnb  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  NASDAQ-100"}
+{"timestamp": "2025-03-15 19:56:16,909", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 19:56:16,911", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:56:16,924", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:56:17,047", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 19:56:17,084", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 19:56:17,307", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for DAX"}
+{"timestamp": "2025-03-15 19:56:17,335", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.42 seconds"}
+{"timestamp": "2025-03-15 19:56:17,342", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company Index\n0   ADS.DE   Adidas   DAX\n1   AIR.PA   Airbus   DAX\n2   ALV.DE  Allianz   DAX\n3   BAS.DE     BASF   DAX\n4  BAYN.DE    Bayer   DAX"}
+{"timestamp": "2025-03-15 19:56:17,342", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 19:56:17,342", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:56:17,343", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:56:17,452", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 19:56:17,548", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 19:56:18,466", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for S&P500"}
+{"timestamp": "2025-03-15 19:56:18,588", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 1 matched for S&P500"}
+{"timestamp": "2025-03-15 19:56:18,591", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.25 seconds"}
+{"timestamp": "2025-03-15 19:56:18,595", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company   Index\n0    MMM                   3M  S&P500\n1    AOS          A. O. Smith  S&P500\n2    ABT  Abbott Laboratories  S&P500\n3   ABBV               AbbVie  S&P500\n4    ACN            Accenture  S&P500"}
+{"timestamp": "2025-03-15 19:56:18,595", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 19:56:18,596", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:56:18,597", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:56:18,724", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 19:56:18,789", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 19:56:19,091", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 0 matched for Dow Jones"}
+{"timestamp": "2025-03-15 19:56:19,121", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.53 seconds"}
+{"timestamp": "2025-03-15 19:56:19,126", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company      Index\n0    MMM                3M  Dow Jones\n1    AXP  American Express  Dow Jones\n2   AMGN             Amgen  Dow Jones\n3   AMZN            Amazon  Dow Jones\n4   AAPL             Apple  Dow Jones"}
+{"timestamp": "2025-03-15 19:56:19,126", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 19:56:19,126", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:56:19,128", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 19:56:19,233", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 19:56:19,301", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 19:56:19,669", "level": "INFO", "function": "extract_stock_table", "message": "✅ Table 3 matched for NASDAQ-100"}
+{"timestamp": "2025-03-15 19:56:19,674", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.55 seconds"}
+{"timestamp": "2025-03-15 19:56:19,681", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company       Index\n0   ADBE               Adobe Inc.  NASDAQ-100\n1    AMD   Advanced Micro Devices  NASDAQ-100\n2   ABNB                   Airbnb  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  NASDAQ-100"}
+{"timestamp": "2025-03-15 20:11:22,730", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:13:16,418", "level": "ERROR", "function": "load_yaml_config", "message": "Failed to load YAML file config/wikipedia_sources.yaml: Invalid or empty configuration file."}
+{"timestamp": "2025-03-15 20:13:16,419", "level": "CRITICAL", "function": "<module>", "message": "YAML configuration could not be loaded. Exiting script."}
+{"timestamp": "2025-03-15 20:15:09,804", "level": "ERROR", "function": "load_yaml_config", "message": "Failed to load YAML file config/wikipedia_sources.yaml: Invalid or empty configuration file."}
+{"timestamp": "2025-03-15 20:15:09,806", "level": "CRITICAL", "function": "<module>", "message": "YAML configuration could not be loaded. Exiting script."}
+{"timestamp": "2025-03-15 20:18:16,012", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:18:16,013", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:18:16,025", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:18:16,151", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:18:16,193", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:18:16,381", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:18:16,382", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:18:16,382", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:18:16,383", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:18:16,490", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:18:16,605", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:18:17,523", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.14 seconds"}
+{"timestamp": "2025-03-15 20:18:17,530", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:18:17,530", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:18:17,530", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:18:17,533", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:18:17,645", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:18:17,701", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:18:18,002", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:18:18,002", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:18:18,003", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:18:18,005", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:18:18,420", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:18:18,469", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:18:18,717", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:23:51,142", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:23:51,143", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:23:51,153", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:23:52,324", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:23:52,361", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:23:52,549", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:23:52,549", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:23:52,550", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:23:52,551", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:23:52,667", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:23:52,740", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:23:53,641", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.09 seconds"}
+{"timestamp": "2025-03-15 20:23:53,648", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:23:53,649", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:23:53,649", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:23:53,651", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:23:53,755", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:23:53,838", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:23:54,117", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:23:54,118", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:23:54,118", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:23:54,120", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:23:54,231", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:23:54,279", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:23:54,519", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:24:49,769", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:24:49,769", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:24:49,779", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:24:49,881", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:24:49,915", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:24:50,090", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:24:50,091", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:24:50,091", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:24:50,092", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:24:50,218", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:24:50,300", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:24:51,218", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.13 seconds"}
+{"timestamp": "2025-03-15 20:24:51,223", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:24:51,224", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:24:51,224", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:24:51,225", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:24:51,329", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:24:51,414", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:24:51,699", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:24:51,699", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:24:51,699", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:24:51,701", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:24:51,808", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:24:51,860", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:24:52,110", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:25:56,511", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:25:56,511", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:25:56,521", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:25:56,647", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:25:56,685", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:25:56,835", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:25:56,836", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:25:56,836", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:25:56,837", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:25:56,947", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:25:57,025", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:25:57,928", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.09 seconds"}
+{"timestamp": "2025-03-15 20:25:57,935", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:25:57,935", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:25:57,935", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:25:57,937", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:25:58,045", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:25:58,105", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:25:58,440", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:25:58,442", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:25:58,442", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:25:58,443", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:25:58,545", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:25:58,603", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:25:58,854", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:53:45,710", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:53:45,711", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:53:45,723", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:53:45,860", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:53:45,894", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:53:46,118", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:53:46,119", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:53:46,119", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:53:46,121", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:53:46,232", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:53:46,301", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:53:47,482", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.36 seconds"}
+{"timestamp": "2025-03-15 20:53:47,493", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:53:47,493", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:53:47,493", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:53:47,495", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:53:47,682", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:53:47,740", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:53:48,034", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:53:48,035", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:53:48,035", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:53:48,036", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:53:48,151", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:53:48,204", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:53:48,438", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:55:50,924", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:55:50,925", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:55:50,936", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:55:51,055", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:55:51,092", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:55:51,289", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:55:51,290", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:55:51,290", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:55:51,293", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:55:51,394", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:55:51,493", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:55:52,538", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.25 seconds"}
+{"timestamp": "2025-03-15 20:55:52,545", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:55:52,546", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:55:52,546", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:55:52,547", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:55:52,717", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:55:52,775", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:55:53,059", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:55:53,060", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:55:53,060", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:55:53,062", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:55:53,167", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:55:53,221", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:55:53,447", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:15,065", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:56:15,065", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:56:15,077", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:16,186", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:56:16,223", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:56:16,393", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:56:16,393", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:56:16,394", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:56:16,395", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:16,496", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:56:16,573", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:56:17,668", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.27 seconds"}
+{"timestamp": "2025-03-15 20:56:17,674", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:56:17,675", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:56:17,675", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:56:17,676", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:17,782", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:56:17,856", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:56:18,154", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:56:18,155", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:18,155", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:18,156", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:18,260", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:56:18,313", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:18,559", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:56,529", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:56:56,529", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:56:56,540", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:56,645", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:56:56,679", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:56:56,832", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:56:56,833", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:56:56,833", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:56:56,835", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:56,933", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:56:57,002", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:56:57,986", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.15 seconds"}
+{"timestamp": "2025-03-15 20:56:57,992", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:56:57,992", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:56:57,992", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:56:57,994", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:58,115", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:56:58,178", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:56:58,457", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:56:58,458", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:58,458", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:58,459", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:56:58,563", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:56:58,651", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:56:58,904", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:58:15,562", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 20:58:15,563", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:58:15,574", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:58:15,695", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 20:58:15,738", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:58:15,944", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 20:58:15,945", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 20:58:15,945", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:58:15,947", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:58:16,068", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 20:58:16,144", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 20:58:17,367", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.42 seconds"}
+{"timestamp": "2025-03-15 20:58:17,378", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 20:58:17,378", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 20:58:17,378", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:58:17,380", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:58:17,479", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 20:58:17,559", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:58:17,887", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 20:58:17,888", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 20:58:17,888", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:58:17,890", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 20:58:17,991", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 20:58:18,040", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 20:58:18,310", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:00:39,910", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:00:39,911", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:00:39,922", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:00:40,054", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:00:40,097", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:00:40,299", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for DAX on https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:00:40,300", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:00:40,300", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:00:40,301", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:00:40,422", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:00:40,521", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:00:41,616", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.32 seconds"}
+{"timestamp": "2025-03-15 21:00:41,624", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:00:41,624", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:00:41,624", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:00:41,625", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:00:41,729", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:00:41,788", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:00:42,113", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:00:42,113", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:00:42,113", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:00:42,115", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:00:42,224", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:00:42,273", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:00:42,610", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:01:59,267", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:01:59,267", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:01:59,277", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:01:59,392", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:01:59,426", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:01:59,638", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.37 seconds"}
+{"timestamp": "2025-03-15 21:01:59,642", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company Index\n0   ADS.DE   Adidas   DAX\n1   AIR.PA   Airbus   DAX\n2   ALV.DE  Allianz   DAX\n3   BAS.DE     BASF   DAX\n4  BAYN.DE    Bayer   DAX"}
+{"timestamp": "2025-03-15 21:01:59,642", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:01:59,642", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:01:59,643", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:01:59,743", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:01:59,810", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:02:00,884", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.24 seconds"}
+{"timestamp": "2025-03-15 21:02:00,892", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:02:00,892", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:02:00,893", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:02:00,895", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:02:00,998", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:02:01,104", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:02:01,408", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:02:01,408", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:02:01,408", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:02:01,410", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:02:01,516", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:02:01,563", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:02:01,883", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:05:47,156", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:05:47,157", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:05:47,168", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:05:47,309", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:05:47,349", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:05:47,594", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.44 seconds"}
+{"timestamp": "2025-03-15 21:05:47,601", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:05:47,602", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:05:47,602", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:05:47,604", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:05:47,706", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:05:47,792", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:05:48,918", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.32 seconds"}
+{"timestamp": "2025-03-15 21:05:48,924", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:05:48,924", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:05:48,925", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:05:48,926", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:05:49,028", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:05:49,100", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:05:49,394", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:05:49,395", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:05:49,395", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:05:49,396", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:05:49,502", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:05:49,557", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:05:49,884", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:12:06,998", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:12:06,999", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:12:07,010", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:12:08,182", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:12:08,238", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:12:08,593", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 1.59 seconds"}
+{"timestamp": "2025-03-15 21:12:08,602", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:12:08,602", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:12:08,602", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:12:08,604", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:12:08,713", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:12:08,792", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:12:09,923", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.32 seconds"}
+{"timestamp": "2025-03-15 21:12:09,927", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:12:09,928", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:12:09,928", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:12:09,930", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:12:10,052", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:12:10,114", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:12:10,460", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:12:10,461", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:12:10,461", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:12:10,463", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:12:10,568", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:12:10,620", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:12:10,954", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:17:15,852", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:17:15,855", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:17:15,870", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:17:16,989", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:17:17,028", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:17:17,284", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 1.43 seconds"}
+{"timestamp": "2025-03-15 21:17:17,289", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:17:17,289", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:17:17,289", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:17:17,291", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:17:17,397", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:17:17,465", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:17:18,629", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.34 seconds"}
+{"timestamp": "2025-03-15 21:17:18,636", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:17:18,636", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:17:18,636", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:17:18,638", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:17:18,748", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:17:18,806", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:17:19,146", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for Dow Jones on https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:17:19,147", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:17:19,147", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:17:19,148", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:17:19,249", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:17:19,299", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:17:19,656", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:19:39,847", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:19:39,848", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:19:39,858", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:19:39,990", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:19:40,021", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:19:40,274", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.43 seconds"}
+{"timestamp": "2025-03-15 21:19:40,279", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:19:40,279", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:19:40,279", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:19:40,281", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:19:40,387", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:19:40,467", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:19:41,589", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.31 seconds"}
+{"timestamp": "2025-03-15 21:19:41,594", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:19:41,595", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:19:41,595", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:19:41,596", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:19:41,701", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:19:41,765", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:19:42,068", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.47 seconds"}
+{"timestamp": "2025-03-15 21:19:42,072", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company                  Sector      Index\n0    MMM                3M            Conglomerate  Dow Jones\n1    AXP  American Express      Financial services  Dow Jones\n2   AMGN             Amgen       Biopharmaceutical  Dow Jones\n3   AMZN            Amazon               Retailing  Dow Jones\n4   AAPL             Apple  Information technology  Dow Jones"}
+{"timestamp": "2025-03-15 21:19:42,073", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:19:42,073", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:19:42,074", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:19:42,174", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:19:42,226", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:19:42,559", "level": "WARNING", "function": "extract_stock_table", "message": "No matching columns found for NASDAQ-100 on https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:22:52,513", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:22:52,514", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:22:52,526", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:22:52,656", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:22:52,688", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:22:52,915", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.40 seconds"}
+{"timestamp": "2025-03-15 21:22:52,919", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:22:52,920", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:22:52,920", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:22:52,921", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:22:53,038", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:22:53,109", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:22:54,237", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.32 seconds"}
+{"timestamp": "2025-03-15 21:22:54,241", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company   Index\n0    MMM                   3M  S&P500\n1    AOS          A. O. Smith  S&P500\n2    ABT  Abbott Laboratories  S&P500\n3   ABBV               AbbVie  S&P500\n4    ACN            Accenture  S&P500"}
+{"timestamp": "2025-03-15 21:22:54,241", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:22:54,241", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:22:54,242", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:22:54,364", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:22:54,463", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:22:54,809", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.57 seconds"}
+{"timestamp": "2025-03-15 21:22:54,813", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company                  Sector      Index\n0    MMM                3M            Conglomerate  Dow Jones\n1    AXP  American Express      Financial services  Dow Jones\n2   AMGN             Amgen       Biopharmaceutical  Dow Jones\n3   AMZN            Amazon               Retailing  Dow Jones\n4   AAPL             Apple  Information technology  Dow Jones"}
+{"timestamp": "2025-03-15 21:22:54,814", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:22:54,814", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:22:54,815", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:22:54,919", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:22:54,963", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:22:55,342", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.53 seconds"}
+{"timestamp": "2025-03-15 21:22:55,348", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company                  Sector       Index\n0   ADBE               Adobe Inc.  Information Technology  NASDAQ-100\n1    AMD   Advanced Micro Devices  Information Technology  NASDAQ-100\n2   ABNB                   Airbnb  Consumer Discretionary  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  Communication Services  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  Communication Services  NASDAQ-100"}
+{"timestamp": "2025-03-15 21:43:22,787", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:43:22,788", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:43:22,797", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:43:22,930", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:43:22,969", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:43:23,205", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.42 seconds"}
+{"timestamp": "2025-03-15 21:43:23,212", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:43:23,212", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:43:23,212", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:43:23,214", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:43:23,350", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:43:23,421", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:43:24,619", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.41 seconds"}
+{"timestamp": "2025-03-15 21:43:24,623", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company   Index\n0    MMM                   3M  S&P500\n1    AOS          A. O. Smith  S&P500\n2    ABT  Abbott Laboratories  S&P500\n3   ABBV               AbbVie  S&P500\n4    ACN            Accenture  S&P500"}
+{"timestamp": "2025-03-15 21:43:24,623", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:43:24,623", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:43:24,625", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:43:24,732", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:43:24,802", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:43:25,109", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.49 seconds"}
+{"timestamp": "2025-03-15 21:43:25,114", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company                  Sector      Index\n0    MMM                3M            Conglomerate  Dow Jones\n1    AXP  American Express      Financial services  Dow Jones\n2   AMGN             Amgen       Biopharmaceutical  Dow Jones\n3   AMZN            Amazon               Retailing  Dow Jones\n4   AAPL             Apple  Information technology  Dow Jones"}
+{"timestamp": "2025-03-15 21:43:25,114", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:43:25,114", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:43:25,116", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:43:25,224", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:43:25,277", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:43:25,634", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.52 seconds"}
+{"timestamp": "2025-03-15 21:43:25,640", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company                  Sector       Index\n0   ADBE               Adobe Inc.  Information Technology  NASDAQ-100\n1    AMD   Advanced Micro Devices  Information Technology  NASDAQ-100\n2   ABNB                   Airbnb  Consumer Discretionary  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  Communication Services  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  Communication Services  NASDAQ-100"}
+{"timestamp": "2025-03-15 21:50:44,229", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 21:50:44,231", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:50:44,241", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:50:44,385", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 21:50:44,422", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 21:50:44,862", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.63 seconds"}
+{"timestamp": "2025-03-15 21:50:44,873", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 21:50:44,873", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 21:50:44,873", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:50:44,876", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:50:44,975", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 21:50:45,048", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 21:50:46,263", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.39 seconds"}
+{"timestamp": "2025-03-15 21:50:46,268", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 21:50:46,268", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 21:50:46,268", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:50:46,270", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:50:46,376", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 21:50:46,441", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 21:50:46,764", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.50 seconds"}
+{"timestamp": "2025-03-15 21:50:46,771", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for Dow Jones: \n  Ticker           Company                  Sector      Index\n0    MMM                3M            Conglomerate  Dow Jones\n1    AXP  American Express      Financial services  Dow Jones\n2   AMGN             Amgen       Biopharmaceutical  Dow Jones\n3   AMZN            Amazon               Retailing  Dow Jones\n4   AAPL             Apple  Information technology  Dow Jones"}
+{"timestamp": "2025-03-15 21:50:46,771", "level": "INFO", "function": "<module>", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 21:50:46,771", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:50:46,773", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 21:50:46,875", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 21:50:46,926", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 21:50:47,336", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.56 seconds"}
+{"timestamp": "2025-03-15 21:50:47,341", "level": "DEBUG", "function": "<module>", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company                  Sector       Index\n0   ADBE               Adobe Inc.  Information Technology  NASDAQ-100\n1    AMD   Advanced Micro Devices  Information Technology  NASDAQ-100\n2   ABNB                   Airbnb  Consumer Discretionary  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  Communication Services  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  Communication Services  NASDAQ-100"}
+{"timestamp": "2025-03-15 22:04:07,207", "level": "INFO", "function": "main", "message": "🔍 Extracting data for: DAX"}
+{"timestamp": "2025-03-15 22:04:07,209", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 22:04:07,221", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 22:04:07,344", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/DAX HTTP/1.1\" 200 38003"}
+{"timestamp": "2025-03-15 22:04:07,379", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/DAX"}
+{"timestamp": "2025-03-15 22:04:07,610", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/DAX_companies.csv in 0.40 seconds"}
+{"timestamp": "2025-03-15 22:04:07,617", "level": "DEBUG", "function": "main", "message": "First 5 rows for DAX: \n    Ticker  Company               Sector Index\n0   ADS.DE   Adidas              Apparel   DAX\n1   AIR.PA   Airbus  Aerospace & Defence   DAX\n2   ALV.DE  Allianz   Financial Services   DAX\n3   BAS.DE     BASF            Chemicals   DAX\n4  BAYN.DE    Bayer      Pharmaceuticals   DAX"}
+{"timestamp": "2025-03-15 22:04:07,617", "level": "INFO", "function": "main", "message": "🔍 Extracting data for: S&P500"}
+{"timestamp": "2025-03-15 22:04:07,618", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 22:04:07,620", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 22:04:07,728", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/List_of_S%26P_500_companies HTTP/1.1\" 200 101537"}
+{"timestamp": "2025-03-15 22:04:07,803", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"}
+{"timestamp": "2025-03-15 22:04:08,678", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/S&P500_companies.csv in 1.06 seconds"}
+{"timestamp": "2025-03-15 22:04:08,683", "level": "DEBUG", "function": "main", "message": "First 5 rows for S&P500: \n  Ticker              Company                  Sector   Index\n0    MMM                   3M             Industrials  S&P500\n1    AOS          A. O. Smith             Industrials  S&P500\n2    ABT  Abbott Laboratories             Health Care  S&P500\n3   ABBV               AbbVie             Health Care  S&P500\n4    ACN            Accenture  Information Technology  S&P500"}
+{"timestamp": "2025-03-15 22:04:08,684", "level": "INFO", "function": "main", "message": "🔍 Extracting data for: Dow Jones"}
+{"timestamp": "2025-03-15 22:04:08,684", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 22:04:08,685", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 22:04:08,791", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1\" 200 71124"}
+{"timestamp": "2025-03-15 22:04:08,853", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"}
+{"timestamp": "2025-03-15 22:04:09,118", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/Dow Jones_companies.csv in 0.43 seconds"}
+{"timestamp": "2025-03-15 22:04:09,122", "level": "DEBUG", "function": "main", "message": "First 5 rows for Dow Jones: \n  Ticker           Company                  Sector      Index\n0    MMM                3M            Conglomerate  Dow Jones\n1    AXP  American Express      Financial services  Dow Jones\n2   AMGN             Amgen       Biopharmaceutical  Dow Jones\n3   AMZN            Amazon               Retailing  Dow Jones\n4   AAPL             Apple  Information technology  Dow Jones"}
+{"timestamp": "2025-03-15 22:04:09,123", "level": "INFO", "function": "main", "message": "🔍 Extracting data for: NASDAQ-100"}
+{"timestamp": "2025-03-15 22:04:09,123", "level": "INFO", "function": "extract_stock_table", "message": "Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 22:04:09,125", "level": "DEBUG", "function": "_new_conn", "message": "Starting new HTTPS connection (1): en.wikipedia.org:443"}
+{"timestamp": "2025-03-15 22:04:09,229", "level": "DEBUG", "function": "_make_request", "message": "https://en.wikipedia.org:443 \"GET /wiki/NASDAQ-100 HTTP/1.1\" 200 55344"}
+{"timestamp": "2025-03-15 22:04:09,285", "level": "INFO", "function": "extract_stock_table", "message": "Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100"}
+{"timestamp": "2025-03-15 22:04:09,599", "level": "INFO", "function": "extract_stock_table", "message": "📁 Data saved to data/NASDAQ-100_companies.csv in 0.48 seconds"}
+{"timestamp": "2025-03-15 22:04:09,603", "level": "DEBUG", "function": "main", "message": "First 5 rows for NASDAQ-100: \n  Ticker                  Company                  Sector       Index\n0   ADBE               Adobe Inc.  Information Technology  NASDAQ-100\n1    AMD   Advanced Micro Devices  Information Technology  NASDAQ-100\n2   ABNB                   Airbnb  Consumer Discretionary  NASDAQ-100\n3  GOOGL  Alphabet Inc. (Class A)  Communication Services  NASDAQ-100\n4   GOOG  Alphabet Inc. (Class C)  Communication Services  NASDAQ-100"}
