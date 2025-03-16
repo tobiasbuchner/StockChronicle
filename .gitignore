@@ -181,3 +181,6 @@ data/*
 
 # Ausnahme für alle Verzeichnisse im data-Ordner
 !data/**/
+
+# Ignoriere alle Dateien im logs-Ordner
+logs/*
