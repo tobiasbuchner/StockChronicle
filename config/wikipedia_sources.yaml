@@ -10,7 +10,7 @@ sources:
           Sector: ["Prime Standard Sector"]
         expected_range: [35, 45]  # DAX has 40 values, allow small deviation
 
-      S&P500:
+      SandP500:
         url: "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
         table_index: 0
         columns: 
@@ -20,7 +20,7 @@ sources:
           Country: [""]
         expected_range: [500, 510] # S&P 500 has 505 values, allow small deviation
 
-      Dow Jones:
+      Dow_Jones:
         url: "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
         table_index: 0
         columns: 
