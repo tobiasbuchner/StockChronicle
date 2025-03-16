@@ -170,6 +170,14 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Ignore data folder
+# Ignoriere alle Dateien und Verzeichnisse
+*
+
+# Ausnahme für die .gitignore-Datei selbst
+!.gitignore
+
+# Ignoriere alle Dateien und Verzeichnisse im data-Ordner
 data/*
-!data/.gitignore
+
+# Ausnahme für alle Verzeichnisse im data-Ordner
+!data/**/
