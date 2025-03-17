@@ -1,0 +1,104 @@
+2025-03-16 11:51:07,612 - INFO - main - 🔍 Extracting data for: DAX
+2025-03-16 11:51:07,612 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX
+2025-03-16 11:51:07,626 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 11:51:07,779 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/DAX HTTP/1.1" 200 38007
+2025-03-16 11:51:07,815 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/DAX
+2025-03-16 11:51:08,059 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/DAX_companies.csv in 0.45 seconds
+2025-03-16 11:51:08,067 - DEBUG - main - First 5 rows for DAX: 
+    Ticker  Company               Sector Index
+0   ADS.DE   Adidas              Apparel   DAX
+1   AIR.PA   Airbus  Aerospace & Defence   DAX
+2   ALV.DE  Allianz   Financial Services   DAX
+3   BAS.DE     BASF            Chemicals   DAX
+4  BAYN.DE    Bayer      Pharmaceuticals   DAX
+2025-03-16 11:51:08,067 - INFO - main - 🔍 Extracting data for: S&P500
+2025-03-16 11:51:08,068 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-03-16 11:51:08,069 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 11:51:08,172 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/List_of_S%26P_500_companies HTTP/1.1" 200 101964
+2025-03-16 11:51:08,286 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-03-16 11:51:09,560 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/S&P500_companies.csv in 1.49 seconds
+2025-03-16 11:51:09,573 - DEBUG - main - First 5 rows for S&P500: 
+  Ticker              Company                  Sector   Index
+0    MMM                   3M             Industrials  S&P500
+1    AOS          A. O. Smith             Industrials  S&P500
+2    ABT  Abbott Laboratories             Health Care  S&P500
+3   ABBV               AbbVie             Health Care  S&P500
+4    ACN            Accenture  Information Technology  S&P500
+2025-03-16 11:51:09,574 - INFO - main - 🔍 Extracting data for: Dow Jones
+2025-03-16 11:51:09,574 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average
+2025-03-16 11:51:09,576 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 11:51:09,701 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1" 200 71125
+2025-03-16 11:51:09,762 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average
+2025-03-16 11:51:10,082 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/Dow Jones_companies.csv in 0.51 seconds
+2025-03-16 11:51:10,087 - DEBUG - main - First 5 rows for Dow Jones: 
+  Ticker           Company                  Sector      Index
+0    MMM                3M            Conglomerate  Dow Jones
+1    AXP  American Express      Financial services  Dow Jones
+2   AMGN             Amgen       Biopharmaceutical  Dow Jones
+3   AMZN            Amazon               Retailing  Dow Jones
+4   AAPL             Apple  Information technology  Dow Jones
+2025-03-16 11:51:10,088 - INFO - main - 🔍 Extracting data for: NASDAQ-100
+2025-03-16 11:51:10,088 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100
+2025-03-16 11:51:10,089 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 11:51:10,202 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/NASDAQ-100 HTTP/1.1" 200 55343
+2025-03-16 11:51:10,256 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100
+2025-03-16 11:51:10,713 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/NASDAQ-100_companies.csv in 0.62 seconds
+2025-03-16 11:51:10,723 - DEBUG - main - First 5 rows for NASDAQ-100: 
+  Ticker                  Company                  Sector       Index
+0   ADBE               Adobe Inc.  Information Technology  NASDAQ-100
+1    AMD   Advanced Micro Devices  Information Technology  NASDAQ-100
+2   ABNB                   Airbnb  Consumer Discretionary  NASDAQ-100
+3  GOOGL  Alphabet Inc. (Class A)  Communication Services  NASDAQ-100
+4   GOOG  Alphabet Inc. (Class C)  Communication Services  NASDAQ-100
+2025-03-16 17:13:40,488 - INFO - main - 🔍 Extracting data for: DAX
+2025-03-16 17:13:40,489 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/DAX
+2025-03-16 17:13:40,503 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 17:13:40,635 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/DAX HTTP/1.1" 200 37986
+2025-03-16 17:13:40,675 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/DAX
+2025-03-16 17:13:40,921 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/DAX_companies.csv in 0.43 seconds
+2025-03-16 17:13:40,937 - DEBUG - main - First 5 rows for DAX: 
+    Ticker  Company               Sector Index
+0   ADS.DE   Adidas              Apparel   DAX
+1   AIR.PA   Airbus  Aerospace & Defence   DAX
+2   ALV.DE  Allianz   Financial Services   DAX
+3   BAS.DE     BASF            Chemicals   DAX
+4  BAYN.DE    Bayer      Pharmaceuticals   DAX
+2025-03-16 17:13:40,937 - INFO - main - 🔍 Extracting data for: SandP500
+2025-03-16 17:13:40,940 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-03-16 17:13:40,949 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 17:13:41,100 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/List_of_S%26P_500_companies HTTP/1.1" 200 101964
+2025-03-16 17:13:41,167 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/List_of_S%26P_500_companies
+2025-03-16 17:13:42,211 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/SandP500_companies.csv in 1.27 seconds
+2025-03-16 17:13:42,215 - DEBUG - main - First 5 rows for SandP500: 
+  Ticker              Company                  Sector     Index
+0    MMM                   3M             Industrials  SandP500
+1    AOS          A. O. Smith             Industrials  SandP500
+2    ABT  Abbott Laboratories             Health Care  SandP500
+3   ABBV               AbbVie             Health Care  SandP500
+4    ACN            Accenture  Information Technology  SandP500
+2025-03-16 17:13:42,215 - INFO - main - 🔍 Extracting data for: Dow_Jones
+2025-03-16 17:13:42,216 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average
+2025-03-16 17:13:42,217 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 17:13:42,339 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/Dow_Jones_Industrial_Average HTTP/1.1" 200 71125
+2025-03-16 17:13:42,402 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average
+2025-03-16 17:13:42,698 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/Dow_Jones_companies.csv in 0.48 seconds
+2025-03-16 17:13:42,704 - DEBUG - main - First 5 rows for Dow_Jones: 
+  Ticker           Company                  Sector      Index
+0    MMM                3M            Conglomerate  Dow_Jones
+1    AXP  American Express      Financial services  Dow_Jones
+2   AMGN             Amgen       Biopharmaceutical  Dow_Jones
+3   AMZN            Amazon               Retailing  Dow_Jones
+4   AAPL             Apple  Information technology  Dow_Jones
+2025-03-16 17:13:42,704 - INFO - main - 🔍 Extracting data for: NASDAQ-100
+2025-03-16 17:13:42,704 - INFO - extract_stock_table - Attempt 1/3: Fetching https://en.wikipedia.org/wiki/NASDAQ-100
+2025-03-16 17:13:42,705 - DEBUG - _new_conn - Starting new HTTPS connection (1): en.wikipedia.org:443
+2025-03-16 17:13:42,808 - DEBUG - _make_request - https://en.wikipedia.org:443 "GET /wiki/NASDAQ-100 HTTP/1.1" 200 55344
+2025-03-16 17:13:42,886 - INFO - extract_stock_table - Successfully fetched https://en.wikipedia.org/wiki/NASDAQ-100
+2025-03-16 17:13:43,245 - INFO - extract_stock_table - 📁 Data saved to data/wiki_corps/NASDAQ-100_companies.csv in 0.54 seconds
+2025-03-16 17:13:43,251 - DEBUG - main - First 5 rows for NASDAQ-100: 
+  Ticker                  Company                  Sector       Index
+0   ADBE               Adobe Inc.  Information Technology  NASDAQ-100
+1    AMD   Advanced Micro Devices  Information Technology  NASDAQ-100
+2   ABNB                   Airbnb  Consumer Discretionary  NASDAQ-100
+3  GOOGL  Alphabet Inc. (Class A)  Communication Services  NASDAQ-100
+4   GOOG  Alphabet Inc. (Class C)  Communication Services  NASDAQ-100

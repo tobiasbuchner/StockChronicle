@@ -1,0 +1,41 @@
+Ticker,Company,Sector,Index
+ADS.DE,Adidas,Apparel,DAX
+AIR.PA,Airbus,Aerospace & Defence,DAX
+ALV.DE,Allianz,Financial Services,DAX
+BAS.DE,BASF,Chemicals,DAX
+BAYN.DE,Bayer,Pharmaceuticals,DAX
+BEI.DE,Beiersdorf,Consumer goods,DAX
+BMW.DE,BMW,Automotive,DAX
+BNR.DE,Brenntag,Distribution,DAX
+CBK.DE,Commerzbank,Financial Services,DAX
+CON.DE,Continental,Automotive,DAX
+1COV.DE,Covestro,Chemicals,DAX
+DTG.DE,Daimler Truck,Automotive,DAX
+DBK.DE,Deutsche Bank,Financial Services,DAX
+DB1.DE,Deutsche Börse,Financial Services,DAX
+DHL.DE,Deutsche Post,Logistics,DAX
+DTE.DE,Deutsche Telekom,Telecommunication,DAX
+EOAN.DE,E.ON,Utilities,DAX
+FRE.DE,Fresenius,Healthcare,DAX
+HNR1.DE,Hannover Re,Insurance,DAX
+HEI.DE,Heidelberg Materials,Construction Materials,DAX
+HEN3.DE,Henkel,Consumer Goods,DAX
+IFX.DE,Infineon Technologies,Technology,DAX
+MBG.DE,Mercedes-Benz Group,Automotive,DAX
+MRK.DE,Merck,Pharmaceuticals,DAX
+MTX.DE,MTU Aero Engines,Aerospace & Defence,DAX
+MUV2.DE,Munich Re,Financial Services,DAX
+P911.DE,Porsche,Automotive,DAX
+PAH3.DE,Porsche SE,Automotive,DAX
+QIA.DE,Qiagen,Biotech,DAX
+RHM.DE,Rheinmetall,Aerospace & Defence,DAX
+RWE.DE,RWE,Utilities,DAX
+SAP.DE,SAP,Technology,DAX
+SRT3.DE,Sartorius,Medical Technology,DAX
+SIE.DE,Siemens,Industrials,DAX
+ENR.DE,Siemens Energy,Energy technology,DAX
+SHL.DE,Siemens Healthineers,Medical Equipment,DAX
+SY1.DE,Symrise,Chemicals,DAX
+VOW3.DE,Volkswagen Group,Automotive,DAX
+VNA.DE,Vonovia,Real Estate,DAX
+ZAL.DE,Zalando,E-Commerce,DAX

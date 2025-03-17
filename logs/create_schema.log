@@ -1,0 +1,13 @@
+2025-03-16 17:12:27,551 - INFO - <module> - ✅ Table 'companies' created in PostgreSQL.
+2025-03-16 17:28:04,952 - WARNING - <module> - ⚠️ Table 'companies' already exists in PostgreSQL.
+2025-03-16 17:28:05,000 - INFO - <module> - ✅ Table 'ohlc_data' created in PostgreSQL.
+2025-03-16 17:51:31,637 - WARNING - <module> - ⚠️ Table 'companies' already exists in PostgreSQL.
+2025-03-16 17:51:31,693 - INFO - <module> - ✅ Table 'ohlc_data' created in PostgreSQL.
+2025-03-16 17:59:34,761 - INFO - <module> - ✅ Table 'companies' created in PostgreSQL.
+2025-03-16 17:59:34,812 - INFO - <module> - ✅ Table 'ohlc_data' created in PostgreSQL.
+2025-03-16 18:02:48,211 - INFO - <module> - ✅ Table 'companies' created in PostgreSQL.
+2025-03-16 18:02:48,243 - INFO - <module> - ✅ Table 'ohlc_data' created in PostgreSQL.
+2025-03-16 19:09:17,428 - WARNING - <module> - ⚠️ Table 'companies' already exists in PostgreSQL.
+2025-03-16 19:09:17,490 - INFO - <module> - ✅ Table 'ohlc_data' created in PostgreSQL.
+2025-03-16 20:37:20,708 - WARNING - <module> - ⚠️ Table 'companies' already exists in PostgreSQL.
+2025-03-16 20:37:20,857 - INFO - <module> - ✅ Table 'ohlc_data' created in PostgreSQL.

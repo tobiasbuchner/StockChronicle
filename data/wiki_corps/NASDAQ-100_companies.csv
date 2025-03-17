@@ -1,0 +1,102 @@
+Ticker,Company,Sector,Index
+ADBE,Adobe Inc.,Information Technology,NASDAQ-100
+AMD,Advanced Micro Devices,Information Technology,NASDAQ-100
+ABNB,Airbnb,Consumer Discretionary,NASDAQ-100
+GOOGL,Alphabet Inc. (Class A),Communication Services,NASDAQ-100
+GOOG,Alphabet Inc. (Class C),Communication Services,NASDAQ-100
+AMZN,Amazon,Consumer Discretionary,NASDAQ-100
+AEP,American Electric Power,Utilities,NASDAQ-100
+AMGN,Amgen,Health Care,NASDAQ-100
+ADI,Analog Devices,Information Technology,NASDAQ-100
+ANSS,Ansys,Information Technology,NASDAQ-100
+AAPL,Apple Inc.,Information Technology,NASDAQ-100
+AMAT,Applied Materials,Information Technology,NASDAQ-100
+APP,AppLovin,Information Technology,NASDAQ-100
+ARM,Arm Holdings,Information Technology,NASDAQ-100
+ASML,ASML Holding,Information Technology,NASDAQ-100
+AZN,AstraZeneca,Health Care,NASDAQ-100
+TEAM,Atlassian,Information Technology,NASDAQ-100
+ADSK,Autodesk,Information Technology,NASDAQ-100
+ADP,Automatic Data Processing,Industrials,NASDAQ-100
+AXON,Axon Enterprise,Industrials,NASDAQ-100
+BKR,Baker Hughes,Energy,NASDAQ-100
+BIIB,Biogen,Health Care,NASDAQ-100
+BKNG,Booking Holdings,Consumer Discretionary,NASDAQ-100
+AVGO,Broadcom,Information Technology,NASDAQ-100
+CDNS,Cadence Design Systems,Information Technology,NASDAQ-100
+CDW,CDW Corporation,Information Technology,NASDAQ-100
+CHTR,Charter Communications,Communication Services,NASDAQ-100
+CTAS,Cintas,Industrials,NASDAQ-100
+CSCO,Cisco,Information Technology,NASDAQ-100
+CCEP,Coca-Cola Europacific Partners,Consumer Staples,NASDAQ-100
+CTSH,Cognizant,Information Technology,NASDAQ-100
+CMCSA,Comcast,Communication Services,NASDAQ-100
+CEG,Constellation Energy,Utilities,NASDAQ-100
+CPRT,Copart,Industrials,NASDAQ-100
+CSGP,CoStar Group,Real Estate,NASDAQ-100
+COST,Costco,Consumer Staples,NASDAQ-100
+CRWD,CrowdStrike,Information Technology,NASDAQ-100
+CSX,CSX Corporation,Industrials,NASDAQ-100
+DDOG,Datadog,Information Technology,NASDAQ-100
+DXCM,DexCom,Health Care,NASDAQ-100
+FANG,Diamondback Energy,Energy,NASDAQ-100
+DASH,DoorDash,Consumer Discretionary,NASDAQ-100
+EA,Electronic Arts,Communication Services,NASDAQ-100
+EXC,Exelon,Utilities,NASDAQ-100
+FAST,Fastenal,Industrials,NASDAQ-100
+FTNT,Fortinet,Information Technology,NASDAQ-100
+GEHC,GE HealthCare,Health Care,NASDAQ-100
+GILD,Gilead Sciences,Health Care,NASDAQ-100
+GFS,GlobalFoundries,Information Technology,NASDAQ-100
+HON,Honeywell,Industrials,NASDAQ-100
+IDXX,Idexx Laboratories,Health Care,NASDAQ-100
+INTC,Intel,Information Technology,NASDAQ-100
+INTU,Intuit,Information Technology,NASDAQ-100
+ISRG,Intuitive Surgical,Health Care,NASDAQ-100
+KDP,Keurig Dr Pepper,Consumer Staples,NASDAQ-100
+KLAC,KLA Corporation,Information Technology,NASDAQ-100
+KHC,Kraft Heinz,Consumer Staples,NASDAQ-100
+LRCX,Lam Research,Information Technology,NASDAQ-100
+LIN,Linde plc,Materials,NASDAQ-100
+LULU,Lululemon Athletica,Consumer Discretionary,NASDAQ-100
+MAR,Marriott International,Consumer Discretionary,NASDAQ-100
+MRVL,Marvell Technology,Information Technology,NASDAQ-100
+MELI,MercadoLibre,Consumer Discretionary,NASDAQ-100
+META,Meta Platforms,Communication Services,NASDAQ-100
+MCHP,Microchip Technology,Information Technology,NASDAQ-100
+MU,Micron Technology,Information Technology,NASDAQ-100
+MSFT,Microsoft,Information Technology,NASDAQ-100
+MSTR,MicroStrategy,Information Technology,NASDAQ-100
+MDLZ,Mondelez International,Consumer Staples,NASDAQ-100
+MDB,MongoDB Inc.,Information Technology,NASDAQ-100
+MNST,Monster Beverage,Consumer Staples,NASDAQ-100
+NFLX,"Netflix, Inc.",Communication Services,NASDAQ-100
+NVDA,Nvidia,Information Technology,NASDAQ-100
+NXPI,NXP Semiconductors,Information Technology,NASDAQ-100
+ORLY,O'Reilly Automotive,Consumer Discretionary,NASDAQ-100
+ODFL,Old Dominion Freight Line,Industrials,NASDAQ-100
+ON,Onsemi,Information Technology,NASDAQ-100
+PCAR,Paccar,Industrials,NASDAQ-100
+PLTR,Palantir Technologies,Information Technology,NASDAQ-100
+PANW,Palo Alto Networks,Information Technology,NASDAQ-100
+PAYX,Paychex,Industrials,NASDAQ-100
+PYPL,PayPal,Financials,NASDAQ-100
+PDD,PDD Holdings,Consumer Discretionary,NASDAQ-100
+PEP,PepsiCo,Consumer Staples,NASDAQ-100
+QCOM,Qualcomm,Information Technology,NASDAQ-100
+REGN,Regeneron Pharmaceuticals,Health Care,NASDAQ-100
+ROP,Roper Technologies,Information Technology,NASDAQ-100
+ROST,Ross Stores,Consumer Discretionary,NASDAQ-100
+SBUX,Starbucks,Consumer Discretionary,NASDAQ-100
+SNPS,Synopsys,Information Technology,NASDAQ-100
+TTWO,Take-Two Interactive,Communication Services,NASDAQ-100
+TMUS,T-Mobile US,Communication Services,NASDAQ-100
+TSLA,"Tesla, Inc.",Consumer Discretionary,NASDAQ-100
+TXN,Texas Instruments,Information Technology,NASDAQ-100
+TTD,Trade Desk (The),Communication Services,NASDAQ-100
+VRSK,Verisk Analytics,Industrials,NASDAQ-100
+VRTX,Vertex Pharmaceuticals,Health Care,NASDAQ-100
+WBD,Warner Bros. Discovery,Communication Services,NASDAQ-100
+WDAY,"Workday, Inc.",Information Technology,NASDAQ-100
+XEL,Xcel Energy,Utilities,NASDAQ-100
+ZS,Zscaler,Information Technology,NASDAQ-100
