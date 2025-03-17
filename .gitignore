@@ -176,13 +176,11 @@ cython_debug/
 # Ausnahme für die .gitignore-Datei selbst
 !.gitignore
 
-# Ignoriere alle Dateien und Verzeichnisse im data-Ordner
-data/*
-
 # Ausnahme für alle Verzeichnisse im data-Ordner
 !data/**/
-!data/**/.gitkeep
 
+# Ignoriere alle .csv-Dateien im data-Ordner und seinen Unterverzeichnissen
+data/**/*.csv
 
 # Ignoriere alle Dateien im logs-Ordner
 logs/*
