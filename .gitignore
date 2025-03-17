@@ -178,3 +178,9 @@ cython_debug/
 
 # Ausnahme für die .gitignore-Datei selbst
 !.gitignore
+
+# Ignoriere alle Dateien im "data" Ordner
+data/*
+
+# Erlaube aber explizit den "data" Ordner selbst
+!data/
