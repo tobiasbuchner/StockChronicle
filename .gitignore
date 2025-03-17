@@ -178,7 +178,6 @@ cython_debug/
 data/*
 # Allow a placeholder file to keep the directory in the repository
 !data/.gitkeep
-!data/**/.gitkeep
 
 # Allow tracking of the logs directory but ignore its files
 !logs/
