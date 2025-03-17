@@ -182,6 +182,8 @@ cython_debug/
 # Ignoriere alle Dateien innerhalb von "data" und dessen Unterordnern
 data/**/*
 
+data/*
+
 # Erlaube explizit Platzhalterdateien für die Ordnerstruktur
 !data/**/.gitkeep
 
