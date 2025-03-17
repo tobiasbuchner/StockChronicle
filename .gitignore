@@ -175,9 +175,13 @@ cython_debug/
 
 # Allow tracking of the data directory but ignore its files
 !data/
-data/**/*
+!data/**/
+!data/**/**/
+
+# Ignore all files in the data directory and its subdirectories
+data/**/**/*
 # Allow a placeholder file to keep the directory in the repository
-!data/.gitkeep
+!data/**/.gitkeep
 
 # Allow tracking of the logs directory but ignore its files
 !logs/
