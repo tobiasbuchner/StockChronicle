@@ -173,19 +173,11 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Erlaube den "data"-Ordner selbst
+# Allow tracking of the data directory but ignore its files
 !data/
-
-# Erlaube alle Unterordner in "data"
-!data/**/
-
-# Ignoriere alle Dateien innerhalb von "data" und dessen Unterordnern
-data/**/*
-
 data/*
-
-# Erlaube explizit Platzhalterdateien für die Ordnerstruktur
-!data/**/.gitkeep
+# Allow a placeholder file to keep the directory in the repository
+!data/.gitkeep
 
 # Allow tracking of the logs directory but ignore its files
 !logs/
