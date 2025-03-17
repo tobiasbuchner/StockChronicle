@@ -181,6 +181,8 @@ data/*
 
 # Ausnahme für alle Verzeichnisse im data-Ordner
 !data/**/
+!data/**/.gitkeep
+
 
 # Ignoriere alle Dateien im logs-Ordner
 logs/*
