@@ -173,14 +173,13 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-# Ignoriere alle Dateien und Verzeichnisse
-*
-
-# Ausnahme für die .gitignore-Datei selbst
-!.gitignore
-
-# Ignoriere alle Dateien im "data" Ordner
-data/*
-
-# Erlaube aber explizit den "data" Ordner selbst
 !data/
+data/*
+# Erlaube eine Platzhalterdatei, um den Ordner im Repository zu halten
+!data/.gitkeep
+
+
+!logs/
+logs/*
+# Erlaube eine Platzhalterdatei, um den Ordner im Repository zu halten
+!logs/.gitkeep
