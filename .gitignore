@@ -181,11 +181,9 @@ cython_debug/
 
 # Ausnahme für alle Verzeichnisse im data-Ordner
 !data/
-!data/**/
 
 # Ausnahme für alle Verzeichnisse im logs-Ordner
 !logs/
-!logs/**/
 
 # Ignoriere alle Dateien im data-Ordner und seinen Unterverzeichnissen
 data/*
