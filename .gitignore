@@ -174,12 +174,13 @@ cython_debug/
 .pypirc
 
 # Allow tracking of the data directory but ignore its files
-!data/**/
 !data/
+!data/wiki_corps/
 data/*
 # Allow a placeholder file to keep the directory in the repository
-!data/**/.gitkeep
 !data/.gitkeep
+!data/wiki_corps/.gitkeep
+
 # Allow tracking of the logs directory but ignore its files
 !logs/
 logs/*
