@@ -177,6 +177,7 @@ cython_debug/
 !.gitignore
 
 # Ausnahme für alle Verzeichnisse im data-Ordner
+!data/
 !data/**/
 
 # Ignoriere alle Dateien im data-Ordner und seinen Unterverzeichnissen
