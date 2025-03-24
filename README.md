@@ -14,15 +14,16 @@ StockChronicle/
 │── data/                # Raw data, CSVs, etc.
 │── notebooks/           # Jupyter Notebooks for analysis
 │── src/                 # Source code
+│   ├── database/        # Database schema creation and management
+│   │   ├── create_schema.py    # Script to create database schema
 │   ├── etl/             # ETL scripts (Extract, Transform, Load)
-│   │   ├── fetch_wiki_idx_corps.py  # Wikipedia data extraction script
-│   │   ├── transform.py            # Data processing
-│   │   ├── load_db.py              # Load data into Postgres
+│   │   ├── fetch_wiki_corps.py  # Wikipedia data extraction script
+│   │   ├── fetch_yfin_ohlc.py   # Yahoo Finance OHLC data extraction script
+│   │   ├── load_wiki_corps_postgres.py  # Load Wikipedia data into Postgres
+│   │   ├── load_ohlc_postgres.py  # Load OHLC data into Postgres
 │   ├── models/          # AI models for predictions
 │   ├── visualization/   # Dashboards & plots
 │   ├── utils/           # ✅ Reusable helper functions (e.g., logging, error handling)
-│   ├── db/              # ✅ Database connection handling
-│       ├── db_connection.py # Handles PostgreSQL connection
 │── tests/               # Unit tests
 │── .gitignore           # Files to ignore in Git
 │── environment.yml      # Conda environment dependencies

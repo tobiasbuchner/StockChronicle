@@ -1,6 +1,6 @@
 from sqlalchemy import (
     create_engine, Column, Integer, String, MetaData, Table, DateTime,
-    Date, Float, BigInteger
+    Date, Float, BigInteger, PrimaryKeyConstraint
 )
 from sqlalchemy.engine import reflection
 import os
@@ -74,13 +74,12 @@ metadata = MetaData()
 # Define schema for companies table
 companies = Table(
     "companies", metadata,
-    Column("id", Integer, primary_key=True),
-    Column("index", String(50), nullable=False),
     Column("ticker", String(20), nullable=False),
+    Column("index", String(50), nullable=False),
     Column("company", String(255), nullable=False),
-    Column("sector", String(255), nullable=True),
+    Column("sector", String(255), nullable=False),
     Column("ingestion_timestamp", DateTime, nullable=False),
-    Column("ingestion_date", Date, nullable=False)  # Add date-only column
+    PrimaryKeyConstraint("ticker", "index")
 )
 
 # Define schema for ohlc_data table
@@ -99,7 +98,6 @@ ohlc_data = Table(
     Column("stock_splits", Float, nullable=True),
     Column("ingestion_timestamp", DateTime, nullable=False),
     Column("ingestion_date", Date, nullable=False)  # Add date-only column
-
 )
 
 # Check if tables exist
