@@ -8,7 +8,7 @@ Data is ingested daily into a PostgreSQL database and used for AI-based predicti
 ## 📁 Project Structure
 ```
 StockChronicle/
-│── config/              # ✅ Configuration files
+│── config/              # Configuration files
 │   ├── wikipedia_sources.yaml  # Index sources & validation counts
 │   ├── .env                    # Database credentials
 │── data/                # Raw data, CSVs, etc.
@@ -23,7 +23,7 @@ StockChronicle/
 │   │   ├── load_ohlc_postgres.py  # Load OHLC data into Postgres
 │   ├── models/          # AI models for predictions
 │   ├── visualization/   # Dashboards & plots
-│   ├── utils/           # ✅ Reusable helper functions (e.g., logging, error handling)
+│   ├── utils/           # Reusable helper functions (e.g., logging, error handling)
 │── tests/               # Unit tests
 │── .gitignore           # Files to ignore in Git
 │── environment.yml      # Conda environment dependencies
