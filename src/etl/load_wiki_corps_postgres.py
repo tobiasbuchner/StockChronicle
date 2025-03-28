@@ -1,90 +1,63 @@
 import pandas as pd
-from sqlalchemy import create_engine, exc, Table, MetaData, update
+from sqlalchemy import exc, Table, MetaData, update
 import os
-from dotenv import load_dotenv
 from datetime import datetime
-import logging
-import json
-from logging.handlers import TimedRotatingFileHandler
+from src.utils.logger import setup_logging  # Import the logger setup function
+from src.utils.db_utils import (
+    load_environment_variables,
+    create_database_engine,  # Import the utility functions
+)
+from src.utils.config_loader import (
+    load_yaml_config,
+    validate_config,  # Import the YAML loader and validator
+)
 
-
-def setup_logging():
-    # Create logs directory if it doesn't exist
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
-    log_filename = os.path.join(log_dir, "load_wiki_corps_postgres.log")
-
-    # Setup log rotation (daily, keep last 30 days)
-    handler = TimedRotatingFileHandler(
-        log_filename, when="midnight",
-        interval=1, backupCount=30, encoding="utf-8"
-    )
-    formatter = logging.Formatter(
-        "%(asctime)s - %(levelname)s - %(funcName)s - %(message)s"
-    )
-    handler.setFormatter(formatter)
-
-    # JSON Logging
-    class JsonFormatter(logging.Formatter):
-        def format(self, record):
-            log_entry = {
-                "timestamp": self.formatTime(record),
-                "level": record.levelname,
-                "function": record.funcName,
-                "message": record.getMessage()
-            }
-            return json.dumps(log_entry, ensure_ascii=False)
-
-    json_handler = logging.FileHandler(
-        "logs/load_wiki_corps_postgres.json", mode="a", encoding="utf-8"
-    )
-    json_handler.setFormatter(JsonFormatter())
-
-    # Configure logging
-    logging.basicConfig(
-        level=logging.DEBUG, handlers=[handler, json_handler,
-                                       logging.StreamHandler()]
-    )
-    return logging.getLogger(__name__)
-
-
-def load_environment_variables():
-    """Load environment variables from a .env file."""
-    load_dotenv(dotenv_path="config/.env")
-    return {
-        "DB_USER": os.getenv("DB_USER"),
-        "DB_PASSWORD": os.getenv("DB_PASSWORD"),
-        "DB_HOST": os.getenv("DB_HOST"),
-        "DB_PORT": os.getenv("DB_PORT"),
-        "DB_NAME": os.getenv("DB_NAME")
-    }
-
-
-def create_database_engine(env_vars):
-    """Create a SQLAlchemy engine using the provided environment variables."""
-    DATABASE_URL = (
-        f"postgresql://{env_vars['DB_USER']}:{env_vars['DB_PASSWORD']}@"
-        f"{env_vars['DB_HOST']}:{env_vars['DB_PORT']}/{env_vars['DB_NAME']}"
-    )
-    return create_engine(DATABASE_URL)
+# Instantiate the logger
+logger = setup_logging("load_wiki_corps_postgres")
 
 
 def load_data_to_db(engine, file_path):
     """Load data from a CSV file into the PostgreSQL database."""
     try:
+        # Check if the file exists and is not empty
+        if not os.path.exists(file_path):
+            logger.error(f"❌ File not found: {file_path}")
+            return
+
+        # Read the CSV file into a DataFrame
         df = pd.read_csv(file_path)
+        if df.empty:
+            logger.warning(f"❌ The file {file_path} is empty. Skipping...")
+            return
+
+        # Convert column names to lowercase for consistency
         df.columns = df.columns.str.lower()
 
-        if {"ticker", "company", "index", "sector"}.issubset(df.columns):
-            df["ingestion_timestamp"] = datetime.now()
+        # Check if the required columns are present in the DataFrame
+        required_columns = {"ticker", "company", "index", "sector"}
+        missing_columns = required_columns - set(df.columns)
+        if missing_columns:
+            logger.error(
+                (
+                    f"❌ Missing columns {missing_columns} in {file_path}. "
+                    "Skipping..."
+                )
+            )
+            return
 
-            metadata = MetaData()
-            companies = Table('companies', metadata, autoload_with=engine)
+        # Add an ingestion timestamp to the DataFrame
+        df["ingestion_timestamp"] = datetime.now()
 
-            # Update existing entries and insert new entries
-            with engine.begin() as connection:  # Automatic commit/rollback
-                for _, row in df.iterrows():
-                    # Check if the entry exists
+        # Load the metadata and define the 'companies' table
+        metadata = MetaData()
+        companies = Table('companies', metadata, autoload_with=engine)
+
+        # Update existing entries and insert new entries
+        with engine.begin() as connection:  # Automatic commit/rollback
+            new_entries = []  # List to store new entries
+            for _, row in df.iterrows():
+                try:
+                    # Check if the entry already exists in the database
                     stmt = companies.select().where(
                         (companies.c.ticker == row['ticker']) &
                         (companies.c.index == row['index'])
@@ -92,7 +65,8 @@ def load_data_to_db(engine, file_path):
                     existing_entry = connection.execute(stmt).fetchone()
 
                     if existing_entry:
-                        # Update only the timestamp
+                        # Update only the ingestion timestamp
+                        # for existing entries
                         connection.execute(
                             update(companies)
                             .where((companies.c.ticker == row['ticker']) &
@@ -102,40 +76,87 @@ def load_data_to_db(engine, file_path):
                             )
                         )
                     else:
-                        # If no entry exists, create a new one
-                        connection.execute(companies.insert().values(
-                            ticker=row['ticker'],
-                            index=row['index'],
-                            company=row['company'],
-                            sector=row['sector'],
-                            ingestion_timestamp=row['ingestion_timestamp']
-                        ))
+                        # Add new entries to the list for batch insertion
+                        new_entries.append({
+                            "ticker": row['ticker'],
+                            "index": row['index'],
+                            "company": row['company'],
+                            "sector": row['sector'],
+                            "ingestion_timestamp": row['ingestion_timestamp']
+                        })
+                except exc.SQLAlchemyError as e:
+                    # Log database errors for individual rows
+                    logger.error(f"❌ Database error for row {row}: {e}")
+                except Exception as e:
+                    # Log unexpected errors for individual rows
+                    logger.error(f"❌ Unexpected error for row {row}: {e}")
 
-            logger.info(
-                f"✅ Successfully processed {len(df)} rows from {file_path}."
-            )
-        else:
-            logger.error(
-                f"❌ Missing required columns in {file_path}, skipping..."
-            )
+            # Perform batch insert for new entries
+            if new_entries:
+                try:
+                    connection.execute(companies.insert(), new_entries)
+                    logger.info(
+                        (
+                            f"✅ Inserted {len(new_entries)} new rows "
+                            "into the database."
+                        )
+                    )
+                except exc.SQLAlchemyError as e:
+                    # Log errors during batch insert
+                    logger.error(f"❌ Batch insert failed: {e}")
 
+        # Log successful processing of the file
+        logger.info(
+            f"✅ Successfully processed {len(df)} rows from {file_path}."
+        )
+
+    except FileNotFoundError:
+        # Log error if the file is not found
+        logger.error(f"❌ File not found: {file_path}")
     except pd.errors.EmptyDataError:
+        # Log error if the file is empty
         logger.error(f"❌ No data found in {file_path}, skipping...")
     except pd.errors.ParserError:
+        # Log error if there is an issue parsing the file
         logger.error(f"❌ Error parsing data in {file_path}, skipping...")
     except exc.SQLAlchemyError as e:
+        # Log general database errors
         logger.error(f"❌ Database error: {e}, skipping...")
     except Exception as e:
+        # Log unexpected errors
         logger.error(f"❌ Unexpected error: {e}, skipping...")
 
 
 if __name__ == "__main__":
-    logger = setup_logging()
+    """
+    Main script to load company data from CSV files into a PostgreSQL database.
+    """
+    # Load the YAML configuration file
+    config_path = "config/wikipedia_sources.yaml"
+    config = load_yaml_config(config_path)
+
+    if not config:
+        # Exit if the configuration file cannot be loaded
+        logger.critical("❌ Failed to load configuration. Exiting script.")
+        exit(1)
+
+    # Validate the configuration
+    try:
+        validate_config(config, required_keys=["paths", "sources"])
+        validate_config(config["paths"], required_keys=["data_dir"])
+        validate_config(config["sources"], required_keys=["wikipedia"])
+    except ValueError as e:
+        logger.critical(f"❌ Configuration validation failed: {e}")
+        exit(1)
+
+    # Load environment variables and create a database engine
     env_vars = load_environment_variables()
     engine = create_database_engine(env_vars)
 
-    data_dir = "data/wiki_corps"
+    # Load the data directory path from the configuration
+    data_dir = config["paths"]["data_dir"]
 
+    # Iterate through all CSV files in the data directory
     for root, dirs, files in os.walk(data_dir):
         for file in files:
             if file.endswith(".csv"):
@@ -143,4 +164,5 @@ if __name__ == "__main__":
                 logger.info(f"📥 Loading data from {file_path}")
                 load_data_to_db(engine, file_path)
 
+    # Log completion of the script
     logger.info("🎉 All datasets have been processed!")

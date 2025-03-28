@@ -1,85 +1,44 @@
-import logging
 import os
 import time
-import json
 from io import StringIO
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
-import yaml
-from logging.handlers import TimedRotatingFileHandler
+from src.utils.logger import setup_logging  # Import the logger setup function
+from src.utils.config_loader import (
+    load_yaml_config,
+    validate_config,  # Import the YAML loader
+)
 
-
-def setup_logging():
-    # Create logs directory if it doesn't exist
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
-
-    # Standard log file
-    log_filename = os.path.join(log_dir, "fetch_wiki_corps.log")
-
-    # Setup log rotation (daily, keep last 30 days)
-    handler = TimedRotatingFileHandler(
-        log_filename, when="midnight", interval=1,
-        backupCount=30, encoding="utf-8"
-    )
-    formatter = logging.Formatter(
-        "%(asctime)s - %(levelname)s - %(funcName)s - %(message)s"
-    )
-    handler.setFormatter(formatter)
-
-    # JSON Logging
-    class JsonFormatter(logging.Formatter):
-        def format(self, record):
-            log_entry = {
-                "timestamp": self.formatTime(record),
-                "level": record.levelname,
-                "function": record.funcName,
-                "message": record.getMessage()
-            }
-            return json.dumps(log_entry, ensure_ascii=False)
-
-    json_handler = logging.FileHandler(
-        "logs/fetch_wiki_corps.json", mode="a", encoding="utf-8"
-    )
-    json_handler.setFormatter(JsonFormatter())
-
-    # Configure logging
-    logging.basicConfig(
-        level=logging.DEBUG, handlers=[handler, json_handler,
-                                       logging.StreamHandler()]
-    )
-    return logging.getLogger(__name__)
-
-
-def load_yaml_config(file_path: str):
-    """Loads the YAML configuration file."""
-    try:
-        with open(file_path, "r") as file:
-            config = yaml.safe_load(file)
-            if (not config or "sources" not in config or
-                    "wikipedia" not in config["sources"] or
-                    "indices" not in config["sources"]["wikipedia"]):
-                raise ValueError("Invalid or empty configuration file.")
-            return config["sources"]["wikipedia"]["indices"]
-    except Exception as e:
-        logger.exception(f"Failed to load YAML file {file_path}: {e}")
-        return None
+# Instantiate the logger
+logger = setup_logging("fetch_wiki_corps")
 
 
 def extract_stock_table(
     url: str,
     column_criteria: dict,
-    expected_range: tuple,
+    expected_range: tuple[int, int],
     index_name: str,
     table_index: int = 0,
     save_path: str = "data/wiki_corps",
     max_retries: int = 3,
     retry_delay: int = 5
-):
+) -> pd.DataFrame | None:
     """
     Extracts stock data from Wikipedia, ensures completeness,
     and saves it as CSV.
+
+    :param url: URL of the Wikipedia page.
+    :param column_criteria: Dictionary mapping column names to possible
+        matches.
+    :param expected_range: Tuple specifying the expected row count range.
+    :param index_name: Name of the stock index.
+    :param table_index: Index of the table on the Wikipedia page.
+    :param save_path: Directory to save the extracted CSV file.
+    :param max_retries: Maximum number of retries for HTTP requests.
+    :param retry_delay: Delay between retries in seconds.
+    :return: DataFrame containing the extracted data, or None if an error
+        occurs.
     """
     headers = {"User-Agent": "Mozilla/5.0"}
     start_time = time.time()
@@ -159,24 +118,47 @@ def main():
     config_path = "config/wikipedia_sources.yaml"
     config = load_yaml_config(config_path)
 
-    if config:
-        for index_name, data in config.items():
+    if not config:
+        logger.critical("Failed to load configuration. Exiting script.")
+        return
+    # Validate the configuration
+    try:
+        validate_config(config, required_keys=["paths", "sources"])
+        validate_config(config["sources"], required_keys=["wikipedia"])
+        validate_config(
+            config["sources"]["wikipedia"],
+            required_keys=["indices"]
+        )
+    except ValueError as e:
+        logger.critical(f"Configuration validation failed: {e}")
+        return
+
+    # Extract save_path from the config
+    save_path = config.get("paths", {}).get("save_path", "data/wiki_corps")
+
+    # Extract Wikipedia-specific configuration
+    wikipedia_config = config.get("sources", {}).get("wikipedia", {}).get(
+        "indices", {}
+    )
+
+    if wikipedia_config:
+        for index_name, data in wikipedia_config.items():
             logger.info(f"🔍 Extracting data for: {index_name}")
             df = extract_stock_table(
                 url=data["url"],
                 column_criteria=data["columns"],
                 expected_range=tuple(data.get("expected_range", [0, 9999])),
                 table_index=data.get("table_index", 0),
-                index_name=index_name
+                index_name=index_name,
+                save_path=save_path
             )
             if df is not None:
                 logger.debug(f"First 5 rows for {index_name}: \n{df.head()}")
     else:
         logger.critical(
-            "YAML configuration could not be loaded. Exiting script."
+            "Wikipedia configuration could not be loaded. Exiting script."
         )
 
 
 if __name__ == "__main__":
-    logger = setup_logging()
     main()

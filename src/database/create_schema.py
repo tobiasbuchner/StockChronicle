@@ -1,74 +1,20 @@
 from sqlalchemy import (
-    create_engine, Column, Integer, String, MetaData, Table, DateTime,
+    Column, Integer, String, MetaData, Table, DateTime,
     Date, Float, BigInteger, PrimaryKeyConstraint
 )
 from sqlalchemy.engine import reflection
-import os
-from dotenv import load_dotenv
-import logging
-import json
-from logging.handlers import TimedRotatingFileHandler
-
-
-def setup_logging():
-    # Create logs directory if it doesn't exist
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
-
-    # Standard log file
-    log_filename = os.path.join(log_dir, "create_schema.log")
-
-    # Setup log rotation (daily, keep last 30 days)
-    handler = TimedRotatingFileHandler(
-        log_filename, when="midnight", interval=1, backupCount=30,
-        encoding="utf-8"
-    )
-    formatter = logging.Formatter(
-        "%(asctime)s - %(levelname)s - %(funcName)s - %(message)s"
-    )
-    handler.setFormatter(formatter)
-
-    # JSON Logging
-    class JsonFormatter(logging.Formatter):
-        def format(self, record):
-            log_entry = {
-                "timestamp": self.formatTime(record),
-                "level": record.levelname,
-                "function": record.funcName,
-                "message": record.getMessage()
-            }
-            return json.dumps(log_entry, ensure_ascii=False)
-
-    json_handler = logging.FileHandler(
-        "logs/create_schema.json", mode="a", encoding="utf-8"
-    )
-    json_handler.setFormatter(JsonFormatter())
-
-    # Configure logging
-    logging.basicConfig(
-        level=logging.DEBUG,
-        handlers=[handler, json_handler, logging.StreamHandler()]
-    )
-    return logging.getLogger(__name__)
-
-
-logger = setup_logging()
-
-# Load environment variables
-load_dotenv("config/.env")
-
-# Database connection
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
-
-DATABASE_URL = (
-    f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:"
-    f"{DB_PORT}/{DB_NAME}"
+from src.utils.logger import setup_logging  # Import the logger setup function
+from src.utils.db_utils import (
+    load_environment_variables,
+    create_database_engine  # Import the utility functions
 )
-engine = create_engine(DATABASE_URL)
+
+# Instantiate the logger
+logger = setup_logging("create_schema")
+
+# Load environment variables and create database engine
+env_vars = load_environment_variables()
+engine = create_database_engine(env_vars)
 metadata = MetaData()
 
 # Define schema for companies table

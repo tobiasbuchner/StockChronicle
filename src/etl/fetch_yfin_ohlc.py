@@ -1,76 +1,16 @@
 import os
-import logging
 import yfinance as yf
 import pandas as pd
-import json
 from datetime import datetime, timedelta
-from logging.handlers import TimedRotatingFileHandler
-from sqlalchemy import create_engine, text
-from dotenv import load_dotenv
+from sqlalchemy import text
+from src.utils.logger import setup_logging  # Import the logger setup function
+from src.utils.db_utils import (
+    load_environment_variables,
+    create_database_engine,
+)  # Import the utility functions
 
-
-def setup_logging():
-    # Create logs directory if it doesn't exist
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
-
-    # Standard log file
-    log_filename = os.path.join(log_dir, "fetch_yfin_ohlc.log")
-
-    # Setup log rotation (daily, keep last 30 days)
-    handler = TimedRotatingFileHandler(
-        log_filename, when="midnight", interval=1, backupCount=30,
-        encoding="utf-8"
-    )
-    formatter = logging.Formatter(
-        "%(asctime)s - %(levelname)s - %(funcName)s - %(message)s"
-    )
-    handler.setFormatter(formatter)
-
-    # JSON Logging
-    class JsonFormatter(logging.Formatter):
-        def format(self, record):
-            log_entry = {
-                "timestamp": self.formatTime(record),
-                "level": record.levelname,
-                "function": record.funcName,
-                "message": record.getMessage()
-            }
-            return json.dumps(log_entry, ensure_ascii=False)
-
-    json_handler = logging.FileHandler(
-        "logs/fetch_yfin_ohlc.json", mode="a", encoding="utf-8"
-    )
-    json_handler.setFormatter(JsonFormatter())
-
-    # Configure logging
-    logging.basicConfig(
-        level=logging.DEBUG, handlers=[handler, json_handler,
-                                       logging.StreamHandler()]
-    )
-    return logging.getLogger(__name__)
-
-
-logger = setup_logging()
-
-
-def load_environment_variables():
-    load_dotenv(dotenv_path="config/.env")
-    return {
-        "DB_USER": os.getenv("DB_USER"),
-        "DB_PASSWORD": os.getenv("DB_PASSWORD"),
-        "DB_HOST": os.getenv("DB_HOST"),
-        "DB_PORT": os.getenv("DB_PORT"),
-        "DB_NAME": os.getenv("DB_NAME")
-    }
-
-
-def create_database_engine(env_vars):
-    DATABASE_URL = (
-        f"postgresql://{env_vars['DB_USER']}:{env_vars['DB_PASSWORD']}@"
-        f"{env_vars['DB_HOST']}:{env_vars['DB_PORT']}/{env_vars['DB_NAME']}"
-    )
-    return create_engine(DATABASE_URL)
+# Instantiate the logger
+logger = setup_logging("fetch_yfin_ohlc")
 
 
 def fetch_stock_data(tickers, index_name, engine, interval="1d",
@@ -189,5 +129,4 @@ def main():
 
 
 if __name__ == "__main__":
-    logger = setup_logging()
     main()
