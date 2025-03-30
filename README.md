@@ -9,7 +9,7 @@ Data is ingested daily into a PostgreSQL database and used for AI-based predicti
 ```
 StockChronicle/
 │── config/              # Configuration files
-│   ├── wikipedia_sources.yaml  # Index sources & validation counts
+│   ├── config.yaml             # Centralized configuration file
 │   ├── .env                    # Database credentials
 │── data/                # Raw data, CSVs, etc.
 │── notebooks/           # Jupyter Notebooks for analysis
@@ -23,7 +23,11 @@ StockChronicle/
 │   │   ├── load_ohlc_postgres.py  # Load OHLC data into Postgres
 │   ├── models/          # AI models for predictions
 │   ├── visualization/   # Dashboards & plots
-│   ├── utils/           # Reusable helper functions (e.g., logging, error handling)
+│   ├── utils/           # Reusable helper functions
+│   │   ├── logger.py           # Centralized logging setup
+│   │   ├── db_utils.py         # Database utility functions
+│   │   ├── config_loader.py    # YAML configuration loader
+│   │   ├── file_utils.py       # File management utilities
 │── tests/               # Unit tests
 │── .gitignore           # Files to ignore in Git
 │── environment.yml      # Conda environment dependencies
@@ -61,7 +65,7 @@ DB_HOST=your_db_host
 DB_PORT=your_db_port
 DB_NAME=your_db_name
 ```
-- Adjust the `wikipedia_sources.yaml` file in the `config` directory to configure the desired indices and validation counts.
+- Adjust the `config.yaml` file in the `config` directory to configure paths, cleanup settings, and data sources.
 
 ### **4️⃣ Create the database schema**
 - Run the `create_schema.py` script to create the required tables in the PostgreSQL database:
@@ -104,10 +108,19 @@ pytest tests/
 ---
 
 ## 🛠️ Key Features
-- **Automated ETL Pipelines**: Extract data from Wikipedia and Yahoo Finance, transform it, and load it into a PostgreSQL database.
-- **AI-Powered Predictions**: Use machine learning models to predict stock trends and prices.
-- **Interactive Dashboards**: Visualize stock data and predictions with interactive plots and dashboards.
-- **Modular Design**: Reusable components for logging, database management, and data validation.
+- **Centralized Utilities**:
+  - Logging: All scripts use a centralized logger from `logger.py`.
+  - Configuration: All scripts load settings from `config.yaml` using `config_loader.py`.
+  - Database Management: Database connections and queries are handled via `db_utils.py`.
+  - File Management: File cleanup and other utilities are managed via `file_utils.py`.
+- **Automated ETL Pipelines**:
+  - Extract data from Wikipedia and Yahoo Finance, transform it, and load it into a PostgreSQL database.
+- **AI-Powered Predictions**:
+  - Use machine learning models to predict stock trends and prices.
+- **Interactive Dashboards**:
+  - Visualize stock data and predictions with interactive plots and dashboards.
+- **Modular Design**:
+  - Reusable components for logging, database management, and data validation.
 
 ---
 

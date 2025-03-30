@@ -132,7 +132,7 @@ if __name__ == "__main__":
     Main script to load company data from CSV files into a PostgreSQL database.
     """
     # Load the YAML configuration file
-    config_path = "config/wikipedia_sources.yaml"
+    config_path = "config/config.yaml"
     config = load_yaml_config(config_path)
 
     if not config:

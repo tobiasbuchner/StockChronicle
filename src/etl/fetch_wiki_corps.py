@@ -9,6 +9,9 @@ from src.utils.config_loader import (
     load_yaml_config,
     validate_config,  # Import the YAML loader
 )
+from src.utils.file_utils import (
+    delete_old_csv_files,  # Import the generic function
+)
 
 # Instantiate the logger
 logger = setup_logging("fetch_wiki_corps")
@@ -26,7 +29,7 @@ def extract_stock_table(
 ) -> pd.DataFrame | None:
     """
     Extracts stock data from Wikipedia, ensures completeness,
-    and saves it as CSV.
+    and saves it as CSV with a timestamp in the filename.
 
     :param url: URL of the Wikipedia page.
     :param column_criteria: Dictionary mapping column names to possible
@@ -37,45 +40,51 @@ def extract_stock_table(
     :param save_path: Directory to save the extracted CSV file.
     :param max_retries: Maximum number of retries for HTTP requests.
     :param retry_delay: Delay between retries in seconds.
-    :return: DataFrame containing the extracted data, or None if an error
-        occurs.
+    :return: DataFrame containing the extracted data, or None
+        if an error occurs.
     """
     headers = {"User-Agent": "Mozilla/5.0"}
     start_time = time.time()
 
+    # Retry logic for HTTP requests
     for attempt in range(max_retries):
         try:
-            logger.info(f"Attempt {attempt+1}/{max_retries}: Fetching {url}")
+            logger.info(f"Attempt {attempt + 1}/{max_retries}: Fetching {url}")
             response = requests.get(url, headers=headers, timeout=10)
 
             if response.status_code == 200:
-                logger.info(f"Successfully fetched {url}")
+                logger.info(f"✅ Successfully fetched {url}")
                 break
             else:
                 logger.warning(
-                    f"HTTP {response.status_code} - Retrying in {retry_delay}s"
+                    f"⚠️ HTTP {response.status_code} - Retrying in "
+                    f"{retry_delay}s"
                 )
         except requests.exceptions.RequestException as e:
-            logger.error(f"Request error on {url}: {e}")
+            logger.error(f"❌ Request error on {url}: {e}")
 
         if attempt < max_retries - 1:
             time.sleep(retry_delay)
     else:
-        logger.critical(f"Failed to fetch {url} after {max_retries} attempts")
+        logger.critical(
+            f"❌ Failed to fetch {url} after {max_retries} attempts"
+        )
         return None
 
-    # Parse HTML
+    # Parse HTML and extract tables
     soup = BeautifulSoup(response.text, "html.parser")
     tables = soup.find_all("table", {"class": "wikitable"})
 
     if table_index >= len(tables):
-        logger.error(f"No table at index {table_index} on {url}")
+        logger.error(f"❌ No table at index {table_index} on {url}")
         return None
 
     try:
+        # Convert HTML table to DataFrame
         df = pd.read_html(StringIO(str(tables[table_index])))[0]
         df.columns = [str(col).lower() for col in df.columns]
 
+        # Select relevant columns based on criteria
         df_selected = {}
         for key, possible_names in column_criteria.items():
             found_col = next(
@@ -88,20 +97,26 @@ def extract_stock_table(
 
         if len(df_selected) < 2:
             logger.warning(
-                f"No matching columns found for {index_name} on {url}")
+                f"⚠️ No matching columns found for {index_name} on {url}")
             return None
 
+        # Create final DataFrame
         df = pd.DataFrame(df_selected)
-        df["Index"] = index_name
+        df["index"] = index_name
 
+        # Validate row count
         if not (expected_range[0] <= len(df) <= expected_range[1]):
             logger.warning(
-                f"Row count {len(df)} out of expected range "
+                f"⚠️ Row count {len(df)} out of expected range "
                 f"{expected_range} for {index_name}"
             )
 
+        # Save DataFrame to CSV with timestamp
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
         os.makedirs(save_path, exist_ok=True)
-        file_path = os.path.join(save_path, f"{index_name}_companies.csv")
+        file_path = os.path.join(
+            save_path, f"{index_name}_companies_{timestamp}.csv"
+        )
         df.to_csv(file_path, index=False)
 
         elapsed_time = time.time() - start_time
@@ -109,32 +124,41 @@ def extract_stock_table(
             f"📁 Data saved to {file_path} in {elapsed_time:.2f} seconds")
         return df
     except Exception as e:
-        logger.exception(f"Error processing table {table_index} on {url}: {e}")
+        logger.exception(
+            f"❌ Error processing table {table_index} on {url}: {e}"
+        )
         return None
 
 
 def main():
+    """
+    Main function to extract stock data from Wikipedia and save it as CSV.
+    """
     # Load YAML config
-    config_path = "config/wikipedia_sources.yaml"
+    config_path = "config/config.yaml"
     config = load_yaml_config(config_path)
 
     if not config:
-        logger.critical("Failed to load configuration. Exiting script.")
+        logger.critical("❌ Failed to load configuration. Exiting script.")
         return
+
     # Validate the configuration
     try:
         validate_config(config, required_keys=["paths", "sources"])
         validate_config(config["sources"], required_keys=["wikipedia"])
         validate_config(
-            config["sources"]["wikipedia"],
-            required_keys=["indices"]
+            config["sources"]["wikipedia"], required_keys=["indices"]
         )
     except ValueError as e:
-        logger.critical(f"Configuration validation failed: {e}")
+        logger.critical(f"❌ Configuration validation failed: {e}")
         return
 
     # Extract save_path from the config
     save_path = config.get("paths", {}).get("save_path", "data/wiki_corps")
+
+    # Delete old CSV files before processing
+    days_to_keep = config.get("cleanup", {}).get("days_to_keep", 1)
+    delete_old_csv_files(save_path, days=days_to_keep)
 
     # Extract Wikipedia-specific configuration
     wikipedia_config = config.get("sources", {}).get("wikipedia", {}).get(
@@ -156,7 +180,7 @@ def main():
                 logger.debug(f"First 5 rows for {index_name}: \n{df.head()}")
     else:
         logger.critical(
-            "Wikipedia configuration could not be loaded. Exiting script."
+            "❌ Wikipedia configuration could not be loaded. Exiting script."
         )
 
 

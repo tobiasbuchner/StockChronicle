@@ -1,6 +1,10 @@
 paths:
   save_path: "data/wiki_corps"  # Directory to save extracted data
   data_dir: "data/wiki_corps"  # Directory containing the CSV files to load into the database
+  yfin_save_path: "data/yfin_ohlc"  # Directory to save Yahoo Finance OHLC data
+  
+cleanup:
+  days_to_keep: 1  # Number of days to keep CSV files before deletion
 
 sources:
   wikipedia:

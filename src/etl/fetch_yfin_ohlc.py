@@ -8,13 +8,18 @@ from src.utils.db_utils import (
     load_environment_variables,
     create_database_engine,
 )  # Import the utility functions
+from src.utils.config_loader import load_yaml_config  # Import the YAML loader
+from src.utils.file_utils import (
+    delete_old_csv_files,  # Import the generic function
+)
 
 # Instantiate the logger
 logger = setup_logging("fetch_yfin_ohlc")
 
 
-def fetch_stock_data(tickers, index_name, engine, interval="1d",
-                     save_path="data/yfin_ohlc"):
+def fetch_stock_data(
+    tickers, index_name, engine, interval="1d", save_path=None
+):
     """
     Fetch historical stock data from Yahoo Finance.
 
@@ -22,16 +27,21 @@ def fetch_stock_data(tickers, index_name, engine, interval="1d",
     :param index_name: Name of the index
     :param engine: SQLAlchemy engine for database connection
     :param interval: Data interval ("1d", "1wk", "1mo")
-    :param save_path: Directory to save CSV files
+    :param save_path: Directory to save CSV files (optional,
+                      loaded from config if None)
     :return: Dictionary of DataFrames with stock data
     """
+    if save_path is None:
+        logger.error("❌ Save path is not provided.")
+        return {}
+
     os.makedirs(save_path, exist_ok=True)
     stock_data = {}
 
     for ticker in tickers:
         try:
-            # Query to get the maximum date for the ticker in the ohlc_data
-            # table
+            # Query to get the maximum date for the ticker
+            # in the ohlc_data table
             query = text("""
             SELECT MAX(date) as max_date
             FROM ohlc_data
@@ -84,10 +94,25 @@ def fetch_stock_data(tickers, index_name, engine, interval="1d",
         except Exception as e:
             logger.error(f"Error fetching data for {ticker}: {e}")
 
+    # Delete old CSV files after successful data fetching
+    delete_old_csv_files(save_path, days=1)
+
     return stock_data
 
 
 def main():
+    """
+    Main function to fetch historical stock data from Yahoo Finance
+    and save it as CSV files.
+    """
+    # Load YAML config
+    config_path = "config/config.yaml"
+    config = load_yaml_config(config_path)
+
+    if not config:
+        logger.critical("❌ Failed to load configuration. Exiting script.")
+        return
+
     # Load environment variables
     env_vars = load_environment_variables()
     engine = create_database_engine(env_vars)
@@ -108,6 +133,9 @@ def main():
             logger.warning("No data found in the database.")
             return
 
+        # Load save_path for Yahoo Finance data from config
+        yfin_save_path = config["paths"]["yfin_save_path"]
+
         for index_name, group in df.groupby("index"):
             tickers = group["ticker"].tolist()
             logger.info(
@@ -115,7 +143,7 @@ def main():
             )
 
             interval = "1d"
-            save_path = os.path.join("data/yfin_ohlc", index_name)
+            save_path = os.path.join(yfin_save_path, index_name)
             data = fetch_stock_data(
                 tickers, index_name, engine,
                 interval=interval, save_path=save_path
