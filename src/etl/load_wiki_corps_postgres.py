@@ -5,7 +5,7 @@ from datetime import datetime
 from src.utils.logger import setup_logging  # Import the logger setup function
 from src.utils.db_utils import (
     load_environment_variables,
-    create_database_engine,  # Import the utility functions
+    create_database_engine,
 )
 from src.utils.config_loader import (
     load_yaml_config,
@@ -17,7 +17,24 @@ logger = setup_logging("load_wiki_corps_postgres")
 
 
 def load_data_to_db(engine, file_path):
-    """Load data from a CSV file into the PostgreSQL database."""
+    """
+    Load data from a CSV file into the PostgreSQL database.
+
+    This function reads a CSV file containing companies of a specific index,
+    validates its structure, and loads the data
+    into the 'companies' table in the PostgreSQL database. It updates existing
+    entries and inserts new ones. Errors during processing are logged.
+
+    :param engine: SQLAlchemy engine object for database connection.
+        Used to execute queries and interact with the database.
+    :param file_path: str
+        Path to the stocks index CSV file to be loaded into the database.
+
+    :return: None
+        The function does not return any value. It logs the results of the
+        operation, including success or failure for each row and the overall
+        file processing status.
+    """
     try:
         # Check if the file exists and is not empty
         if not os.path.exists(file_path):
@@ -143,7 +160,9 @@ if __name__ == "__main__":
     # Validate the configuration
     try:
         validate_config(config, required_keys=["paths", "sources"])
-        validate_config(config["paths"], required_keys=["data_dir"])
+        validate_config(
+            config["paths"], required_keys=["wiki_corps_save_path"]
+        )
         validate_config(config["sources"], required_keys=["wikipedia"])
     except ValueError as e:
         logger.critical(f"❌ Configuration validation failed: {e}")
@@ -154,7 +173,7 @@ if __name__ == "__main__":
     engine = create_database_engine(env_vars)
 
     # Load the data directory path from the configuration
-    data_dir = config["paths"]["data_dir"]
+    data_dir = config["paths"]["wiki_corps_save_path"]
 
     # Iterate through all CSV files in the data directory
     for root, dirs, files in os.walk(data_dir):

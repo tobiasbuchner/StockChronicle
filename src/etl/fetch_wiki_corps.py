@@ -7,10 +7,11 @@ from bs4 import BeautifulSoup
 from src.utils.logger import setup_logging  # Import the logger setup function
 from src.utils.config_loader import (
     load_yaml_config,
-    validate_config,  # Import the YAML loader
+    validate_config,  # Import the YAML loader and validator
 )
 from src.utils.file_utils import (
-    delete_old_csv_files,  # Import the generic function
+    delete_old_csv_files,
+    # Import the generic function to avoid data overload
 )
 
 # Instantiate the logger
@@ -28,13 +29,16 @@ def extract_stock_table(
     retry_delay: int = 5
 ) -> pd.DataFrame | None:
     """
-    Extracts stock data from Wikipedia, ensures completeness,
+    Extracts stock data (ticker, company, sector) from Wikipedia,
+    ensures completeness,
     and saves it as CSV with a timestamp in the filename.
 
-    :param url: URL of the Wikipedia page.
+    :param url: URL of the Wikipedia page containing the stock data table
+        for a specific index.
     :param column_criteria: Dictionary mapping column names to possible
         matches.
-    :param expected_range: Tuple specifying the expected row count range.
+    :param expected_range: Tuple specifying the expected row count range
+        according to the number of companies listed in a specific index.
     :param index_name: Name of the stock index.
     :param table_index: Index of the table on the Wikipedia page.
     :param save_path: Directory to save the extracted CSV file.
@@ -75,6 +79,7 @@ def extract_stock_table(
     soup = BeautifulSoup(response.text, "html.parser")
     tables = soup.find_all("table", {"class": "wikitable"})
 
+    # Check if the specified table index exists
     if table_index >= len(tables):
         logger.error(f"❌ No table at index {table_index} on {url}")
         return None
@@ -132,7 +137,8 @@ def extract_stock_table(
 
 def main():
     """
-    Main function to extract stock data from Wikipedia and save it as CSV.
+    Main function to extract stock data from a specific index from Wikipedia
+    and save it as a CSV file.
     """
     # Load YAML config
     config_path = "config/config.yaml"
@@ -154,7 +160,9 @@ def main():
         return
 
     # Extract save_path from the config
-    save_path = config.get("paths", {}).get("save_path", "data/wiki_corps")
+    save_path = config.get("paths", {}).get(
+        "wiki_corps_save_path", "data/wiki_corps"
+    )
 
     # Delete old CSV files before processing
     days_to_keep = config.get("cleanup", {}).get("days_to_keep", 1)

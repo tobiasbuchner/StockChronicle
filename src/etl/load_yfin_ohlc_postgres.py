@@ -71,7 +71,7 @@ def main():
     engine = create_database_engine(env_vars)
 
     # Load the data directory path from the configuration
-    data_dir = config["paths"]["yfin_save_path"]
+    data_dir = config["paths"]["yfin_ohlc_save_path"]
 
     # Iterate through all CSV files in the data directory
     for root, dirs, files in os.walk(data_dir):

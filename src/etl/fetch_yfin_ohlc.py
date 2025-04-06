@@ -37,11 +37,11 @@ def fetch_stock_data(
 
     os.makedirs(save_path, exist_ok=True)
     stock_data = {}
+    no_data_tickers = []  # List to track tickers with no data
 
     for ticker in tickers:
         try:
             # Query to get the maximum date for the ticker
-            # in the ohlc_data table
             query = text("""
             SELECT MAX(date) as max_date
             FROM ohlc_data
@@ -80,6 +80,7 @@ def fetch_stock_data(
 
             if df.empty:
                 logger.warning(f"No data found for {ticker}")
+                no_data_tickers.append(ticker)
                 continue
 
             df["Index"] = index_name  # Add index column
@@ -93,6 +94,16 @@ def fetch_stock_data(
             logger.info(f"Saved {ticker} data to {save_path}/{filename}")
         except Exception as e:
             logger.error(f"Error fetching data for {ticker}: {e}")
+            no_data_tickers.append(ticker)
+
+    # Log analysis after processing all tickers for the index
+    if no_data_tickers:
+        logger.info(
+            f"Analysis for index {index_name}: {len(no_data_tickers)} tickers "
+            f"had no data. Tickers: {', '.join(no_data_tickers)}"
+        )
+    else:
+        logger.info(f"Analysis for index {index_name}: All tickers had data.")
 
     # Delete old CSV files after successful data fetching
     delete_old_csv_files(save_path, days=1)
@@ -134,19 +145,19 @@ def main():
             return
 
         # Load save_path for Yahoo Finance data from config
-        yfin_save_path = config["paths"]["yfin_save_path"]
+        save_path = config["paths"]["yfin_ohlc_save_path"]
 
         for index_name, group in df.groupby("index"):
             tickers = group["ticker"].tolist()
             logger.info(
-                f"Loaded {len(tickers)} tickers for index {index_name}"
+                f"Loading {len(tickers)} tickers for index {index_name}"
             )
 
             interval = "1d"
-            save_path = os.path.join(yfin_save_path, index_name)
+            save_path_index = os.path.join(save_path, index_name)
             data = fetch_stock_data(
                 tickers, index_name, engine,
-                interval=interval, save_path=save_path
+                interval=interval, save_path=save_path_index
             )
 
             # Show a preview of the first stock's data

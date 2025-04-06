@@ -1,10 +1,10 @@
 paths:
-  save_path: "data/wiki_corps"  # Directory to save extracted data
-  data_dir: "data/wiki_corps"  # Directory containing the CSV files to load into the database
-  yfin_save_path: "data/yfin_ohlc"  # Directory to save Yahoo Finance OHLC data
-  
+  wiki_corps_save_path: "data/wiki_corps"  # Directory to save extracted Wikipedia data
+  yfin_ohlc_save_path: "data/yfin_ohlc"  # Directory to save Yahoo Finance OHLC data
+  yfin_company_data_save_path: "data/yfin_company_data"  # Directory to save company details
+
 cleanup:
-  days_to_keep: 1  # Number of days to keep CSV files before deletion
+  days_to_keep: 7  # Number of days to keep CSV files before deletion
 
 sources:
   wikipedia:
@@ -26,7 +26,7 @@ sources:
           Company: ["Security"]
           Sector: ["GICS Sector"]
           Country: [""]
-        expected_range: [500, 510] # S&P 500 has 505 values, allow small deviation
+        expected_range: [500, 510]  # S&P 500 has 505 values, allow small deviation
 
       Dow_Jones:
         url: "https://en.wikipedia.org/wiki/Dow_Jones_Industrial_Average"
@@ -36,7 +36,7 @@ sources:
           Company: ["Company"]
           Sector: ["Industry"]
           Country: [""]
-        expected_range: [28, 32] # Dow Jones has 30 values, allow small deviation
+        expected_range: [28, 32]  # Dow Jones has 30 values, allow small deviation
 
       NASDAQ-100:
         url: "https://en.wikipedia.org/wiki/NASDAQ-100"
@@ -46,4 +46,5 @@ sources:
           Company: ["Company"]
           Sector: ["GICS Sector"]
           Country: ["Country"]
-        expected_range: [98, 105] # NASDAQ-100 has 102 values, allow small deviation
+        expected_range: [98, 105]  # NASDAQ-100 has 102 values, allow small deviation
+

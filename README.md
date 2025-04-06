@@ -12,6 +12,13 @@ StockChronicle/
 │   ├── config.yaml             # Centralized configuration file
 │   ├── .env                    # Database credentials
 │── data/                # Raw data, CSVs, etc.
+│   ├── wiki_corps/             # Extracted Wikipedia data
+│   ├── yfin_ohlc/              # Yahoo Finance OHLC data
+│   ├── yfin_company_data/      # Yahoo Finance company details
+│── logs/                # Log files
+│   ├── fetch_wiki_corps.log    # Logs for Wikipedia extraction
+│   ├── fetch_yfin_ohlc.log     # Logs for Yahoo Finance OHLC extraction
+│   ├── load_wiki_corps.log     # Logs for loading Wikipedia data into Postgres
 │── notebooks/           # Jupyter Notebooks for analysis
 │── src/                 # Source code
 │   ├── database/        # Database schema creation and management
@@ -19,6 +26,7 @@ StockChronicle/
 │   ├── etl/             # ETL scripts (Extract, Transform, Load)
 │   │   ├── fetch_wiki_corps.py  # Wikipedia data extraction script
 │   │   ├── fetch_yfin_ohlc.py   # Yahoo Finance OHLC data extraction script
+│   │   ├── fetch_company_info.py  # Yahoo Finance company details extraction script
 │   │   ├── load_wiki_corps_postgres.py  # Load Wikipedia data into Postgres
 │   │   ├── load_ohlc_postgres.py  # Load OHLC data into Postgres
 │   ├── models/          # AI models for predictions
@@ -85,6 +93,10 @@ python src/etl/load_wiki_corps_postgres.py
 #### Extract OHLC (Open, High, Low, Close) data from Yahoo Finance:
 ```bash
 python src/etl/fetch_yfin_ohlc.py
+```
+#### Extract company details from Yahoo Finance:
+```bash
+python src/etl/fetch_company_info.py
 ```
 #### Load the OHLC data into the PostgreSQL database:
 ```bash
